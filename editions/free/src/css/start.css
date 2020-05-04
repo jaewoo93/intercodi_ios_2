@@ -27,6 +27,7 @@ div.frame {
     background: url('../assets/start/catlogo.png');
 }
 
+/* 밑에 글씨창의 배경 부분 => 메인 로고로 바꾸면 될듯? */
 *.credits {
     position: absolute;
     bottom: 0px;
@@ -39,6 +40,7 @@ div.frame {
     z-index: 20;
 }
 
+/* 밑부분 글씨 */
 *.creditsText {
     position: absolute;
     bottom: 0px;
