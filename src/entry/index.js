@@ -19,21 +19,12 @@ export function indexMain () {
 
     //pbs 무엇
     if (window.Settings.edition == 'PBS') {
-        gn('topbar-moreapps').textContent = Localization.localize('PBS_MORE_APPS');
         gn('startButton').textContent = Localization.localize('PBS_START');
         gn('gettings').textContent = Localization.localize('PBS_HOW_TO');
 
         gn('startButton').ontouchend = indexGohome;
         gn('pbschars').ontouchend = indexGohome;
-
-        gn('topbar-moreapps').ontouchstart = indexMoreApps;
-        gn('topbar-settings').ontouchstart = indexGoSettings;
-        gn('topbar-info').ontouchstart = indexInfo;
     }
-
-    setTimeout(function () {
-        gn('rays').className = 'rays spinme';
-    }, 250);
 }
 
 function indexFirstTime () {
@@ -42,8 +33,7 @@ function indexFirstTime () {
     if (window.Settings.edition == 'PBS') {
         gn('pbschars').className = 'characters hide';
         gn('startcode').className = 'catlogo show';
-         gn('topbar').className = 'topbar hide';
-         gn('startButton').className = 'startButton hide';
+        gn('startButton').className = 'startButton hide';
     } else {
          gn('purpleguy').className = 'purple show';
          gn('blueguy').className = 'blue show';
@@ -77,7 +67,6 @@ function indexLoadStart (afterUsage) {
 
     if (window.Settings.edition == 'PBS') {
         gn('pbschars').className = 'characters show';
-        gn('topbar').className = 'topbar show';
         gn('startButton').className = 'startButton show';
     } else {
         gn('purpleguy').className = 'purple hide';
