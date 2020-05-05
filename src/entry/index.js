@@ -27,6 +27,7 @@ export function indexMain () {
     }
 }
 
+// 첫 홈 화면
 function indexFirstTime () {
     gn('authors').className = 'credits show';
     gn('authorsText').className = 'creditsText show';
@@ -48,6 +49,8 @@ function indexFirstTime () {
             indexLoadOptions();
         };
     }
+
+    // 2초 후 indexLoadOptions 화면으로 전환
     setTimeout(function () {
         indexLoadOptions();
     }, 2000);
@@ -63,8 +66,6 @@ function indexLoadOptions () {
 }
 
 function indexLoadStart (afterUsage) {
-
-
     if (window.Settings.edition == 'PBS') {
         gn('pbschars').className = 'characters show';
         gn('startButton').className = 'startButton show';
@@ -96,8 +97,12 @@ function indexLoadStart (afterUsage) {
         gn('usageNoanswer').className = 'usageNoanswer hide';
     }
     iOS.setAnalyticsPlacePref(AppUsage.currentUsage);
+    
+    // 2초 로딩 후 화면 전환
+    gn('authors').className = 'credits hide';
     gn('gettings').className = 'gettings show';
     gn('startcode').className = 'startcode show';
+    gn('authorsText').className = 'creditsText hide';
     document.ontouchmove = function (e) 
     {
         e.preventDefault();

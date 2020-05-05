@@ -28,17 +28,17 @@ div.frame {
 }
 
 /* 밑에 글씨창의 배경 부분 => 메인 로고로 바꾸면 될듯? */
-/* *.credits {
+.credits {
     position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 45%;
-    background: url('../assets/start/bottom.png');
-    background-position: center bottom;
+    background: url('../assets/start/loading_intercodi.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    top: 30%;
+    left: 15%;
+    width: 70%;
+    height: 25%;
     z-index: 20;
-} */
+}
 
 /* 밑부분 글씨 */
 .creditsText {
