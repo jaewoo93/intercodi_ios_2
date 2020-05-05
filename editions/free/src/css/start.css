@@ -1,7 +1,7 @@
 html, body, {
     color: #4c4d4f;
     direction: ltr;
-    background: #35A8E0;
+    /* background: #35A8E0; */
     font: 81.25% Roboto, arial, sans-serif;
     -webkit-user-select: none;
     height: 100%;
@@ -11,7 +11,7 @@ div.frame {
     width: 100%;
     height: 100%;
     position: relative;
-    background: #35A8E0;
+    background: url('../assets/start/loading_background.png');
     overflow: hidden;
     -webkit-overflow-scrolling: none;
 }
@@ -47,9 +47,8 @@ div.frame {
     width: 100%;
     height: 45%;
     background: url('../assets/start/creditsText.png');
-    background-position: center center;
+    background-position: center bottom;
     background-repeat: no-repeat;
-    background-size: auto 45%;
     z-index: 21;
 }
 
@@ -131,12 +130,12 @@ div.frame {
 
 .gettings {
     position: absolute;
-    top: 65%;
-    left: 59%;
+    top: 35%;
+    left: 50%;
     margin: 0px;
-    width: 17%;
-    height: 22%;
-    background: url('../assets/start/helpOn.svg');
+    width: 35%;
+    height: 40%;
+    background: url('../assets/start/helpOff.svg');
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position-x: center;
@@ -145,7 +144,7 @@ div.frame {
 }
 
 .gettings:active {
-    background: url('../assets/start/helpOff.svg');
+    background: url('../assets/start/helpOn.svg');
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position-x: center;
@@ -154,31 +153,15 @@ div.frame {
 .gettings.hide {display: none;}
 .gettings.show {display: block;}
 
-.gear.hide {display: none;}
-.gear.show {display: block;}
-
-.gear {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    background: url('../assets/lobby/gearOff.svg');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position-x: center;
-    -webkit-tap-highlight-color: transparent;
-    z-index: 1000;
-    width: 60px;
-    height: 60px;
-}
 /* 시작화면 */
 .startcode {
     position: absolute;
-    top: 65%;
-    left: 24%;
+    top: 35%;
+    left: 15%;
     margin: 0px;
-    width: 17%;
-    height: 22%;
-    background: url('../assets/start/houseOn.svg');
+    width: 35%;
+    height: 40%;
+    background: url('../assets/start/startOff.svg');
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position-x: center;
@@ -190,7 +173,7 @@ div.frame {
 .startcode.show {display: block;}
 
 .startcode:active {
-    background: url('../assets/start/houseOff.svg');
+    background: url('../assets/start/startOn.svg');
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position-x: center;

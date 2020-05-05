@@ -29,8 +29,6 @@ export function indexMain () {
         gn('topbar-moreapps').ontouchstart = indexMoreApps;
         gn('topbar-settings').ontouchstart = indexGoSettings;
         gn('topbar-info').ontouchstart = indexInfo;
-    } else {
-        gn('gear').ontouchstart = indexGoSettings;
     }
 
     setTimeout(function () {
@@ -39,8 +37,8 @@ export function indexMain () {
 }
 
 function indexFirstTime () {
-    // gn('authors').className = 'credits show';
-    // gn('authorsText').className = 'creditsText show';
+    gn('authors').className = 'credits show';
+    gn('authorsText').className = 'creditsText show';
     if (window.Settings.edition == 'PBS') {
         gn('pbschars').className = 'characters hide';
         gn('startcode').className = 'catlogo show';
@@ -85,7 +83,6 @@ function indexLoadStart (afterUsage) {
         gn('purpleguy').className = 'purple hide';
         gn('blueguy').className = 'blue hide';
         gn('redguy').className = 'red hide';
-        gn('gear').className = 'gear show';
 
         if (afterUsage) {
             gn('catface').className = 'catface show';
@@ -165,12 +162,12 @@ function indexGohome () {
 }
 
 
-function indexGoSettings () {
-    // Switch to the settings selection page
-    // Triggered by tapping the gear icon in the top right
-    ScratchAudio.sndFX('tap.wav');
-    window.location.href = 'home.html?place=gear';
-}
+// function indexGoSettings () {
+//     // Switch to the settings selection page
+//     // Triggered by tapping the gear icon in the top right
+//     ScratchAudio.sndFX('tap.wav');
+//     window.location.href = 'home.html?place=gear';
+// }
 
 function indexGettingstarted () {
     ScratchAudio.sndFX('tap.wav');
