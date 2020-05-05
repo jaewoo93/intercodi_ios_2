@@ -9,26 +9,15 @@
     -webkit-overflow-scrolling: none;
 }
 
-*.catlogo {
-    position: absolute;
-    top: 127px;
-    left: 284px;
-    margin: 0px;
-    width: 468px;
-    height: 300px;
-    z-index: 10;
-    background: url('../assets/start/catlogo.png');
-}
-
-/* 밑에 글씨창의 배경 부분 => 메인 로고로 바꾸면 될듯? */
+/* 로딩화면 인터코디 로고 */
 .credits {
     position: absolute;
     background: url('../assets/start/loading_intercodi.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: auto 100%;
+    background-position-x: center;
     top: 30%;
-    left: 15%;
-    width: 70%;
+    width: 100%;
     height: 25%;
     z-index: 20;
 }
@@ -38,10 +27,10 @@
     position: absolute;
     background-image: url('../assets/start/loading_copyright.png');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: auto 100%;
+    background-position-x: center;
     bottom: 5px;
-    left: 30%;
-    width: 40%;
+    width: 100%;
     height: 4%;
     z-index: 21;
 }
@@ -49,79 +38,21 @@
 .credits.hide, .creditsText.hide {display: none;}
 .credits.show, .creditsText.show {display: block;}
 
+/* 시작화면 인터코디 로고 */
 *.catface {
     position: absolute;
-    top: 18%;
+    top: 5%;
     margin: 0px;
-    height: 22%;
+    width: 100%;
+    height: 20%;
     z-index: 5;
-    background: url('../assets/start/Cat.svg');
-    width: 100%;
-    background-position: center center;
+    background-image: url('../assets/start/intercodi_logo.png');
     background-repeat: no-repeat;
+    background-position-x: center;
     background-size: auto 100%;
 }
 
-*.jrlogo {
-    position: absolute;
-    top: 39%;
-    width: 100%;
-    margin: 0px;
-    height: 16%;
-    z-index: 10;
-    background: url('../assets/start/ScratchJrLogo.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-}
-
-*.purple {
-    position: absolute;
-    top: 7%;
-    left: 15%;
-    margin: 0px;
-    width: 100%;
-    height: 26%;
-    background: url('../assets/start/FunkyPurple.svg');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-}
-
-.purple.hide {display: none;}
-.purple.show {display: block;}
-
-*.red {
-    position: absolute;
-    top: -18%;
-    left: 65%;
-    margin: 0px;
-    width: 100%;
-    height: 54%;
-    z-index: 2;
-    background: url('../assets/start/FunkyRed.svg');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-}
-
-.red.hide {display: none;}
-.red.show {display: block;}
-
-*.blue {
-    position: absolute;
-    top: 46%;
-    left: 87%;
-    margin: 0px;
-    width: 100%;
-    height: 23%;
-    background: url('../assets/start/FunkyBlue.svg');
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    z-index: 21;
-}
-
-.blue.hide {display: none;}
-.blue.show {display: block;}
-
+/* 홈화면 help버튼 */
 .gettings {
     position: absolute;
     top: 35%;
@@ -131,8 +62,7 @@
     height: 40%;
     background: url('../assets/start/helpOff.svg');
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position-x: center;
+    background-size: 100% 100%;
     -webkit-tap-highlight-color: transparent;
     z-index: 1000;
 }
@@ -140,14 +70,13 @@
 .gettings:active {
     background: url('../assets/start/helpOn.svg');
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position-x: center;
+    background-size: 100% 100%;
 }
 
 .gettings.hide {display: none;}
 .gettings.show {display: block;}
 
-/* 시작화면 */
+/* 홈화면 start버튼 */
 .startcode {
     position: absolute;
     top: 35%;
@@ -157,8 +86,7 @@
     height: 40%;
     background: url('../assets/start/startOff.svg');
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position-x: center;
+    background-size: 100% 100%;
     -webkit-tap-highlight-color: transparent;
     z-index: 1000;
 }
@@ -169,11 +97,11 @@
 .startcode:active {
     background: url('../assets/start/startOn.svg');
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position-x: center;
+    background-size: 100% 100%;
 }
 
-.catface.hide, .jrlogo.hide, .frame.hide {display: none;}
+.catface.hide {display: none;}
+.catface.show {display: block;}
 /* Analytics Info Page Elements */
 
 .usageQuestion {
@@ -299,4 +227,3 @@
     font-size: 20px;
     text-align: right;
 }
-

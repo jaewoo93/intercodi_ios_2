@@ -19,11 +19,7 @@ export function indexMain () {
 
     //pbs 무엇
     if (window.Settings.edition == 'PBS') {
-        gn('startButton').textContent = Localization.localize('PBS_START');
         gn('gettings').textContent = Localization.localize('PBS_HOW_TO');
-
-        gn('startButton').ontouchend = indexGohome;
-        gn('pbschars').ontouchend = indexGohome;
     }
 }
 
@@ -31,14 +27,9 @@ export function indexMain () {
 function indexFirstTime () {
     gn('authors').className = 'credits show';
     gn('authorsText').className = 'creditsText show';
+    gn('catface').className = 'catface hide';
     if (window.Settings.edition == 'PBS') {
-        gn('pbschars').className = 'characters hide';
         gn('startcode').className = 'catlogo show';
-        gn('startButton').className = 'startButton hide';
-    } else {
-         gn('purpleguy').className = 'purple show';
-         gn('blueguy').className = 'blue show';
-         gn('redguy').className = 'red show';
     }
     iOS.askpermission(); // ask for sound recording
     setTimeout(function () {
@@ -67,16 +58,11 @@ function indexLoadOptions () {
 
 function indexLoadStart (afterUsage) {
     if (window.Settings.edition == 'PBS') {
-        gn('pbschars').className = 'characters show';
-        gn('startButton').className = 'startButton show';
+        
     } else {
-        gn('purpleguy').className = 'purple hide';
-        gn('blueguy').className = 'blue hide';
-        gn('redguy').className = 'red hide';
 
         if (afterUsage) {
             gn('catface').className = 'catface show';
-            gn('jrlogo').className = 'jrlogo show';
             gn('usageQuestion').className = 'usageQuestion hide';
             gn('usageSchool').className = 'usageSchool hide';
             gn('usageHome').className = 'usageHome hide';
@@ -86,10 +72,8 @@ function indexLoadStart (afterUsage) {
         iOS.setAnalyticsPlacePref(AppUsage.currentUsage);
     }
 
-
     if (afterUsage) {
         gn('catface').className = 'catface show';
-        gn('jrlogo').className = 'jrlogo show';
         gn('usageQuestion').className = 'usageQuestion hide';
         gn('usageSchool').className = 'usageSchool hide';
         gn('usageHome').className = 'usageHome hide';
@@ -103,6 +87,7 @@ function indexLoadStart (afterUsage) {
     gn('gettings').className = 'gettings show';
     gn('startcode').className = 'startcode show';
     gn('authorsText').className = 'creditsText hide';
+    gn('catface').className = 'catface show';
     document.ontouchmove = function (e) 
     {
         e.preventDefault();
@@ -115,11 +100,7 @@ function indexLoadStart (afterUsage) {
 function indexLoadUsage () {
     gn('authors').className = 'credits show';
     gn('authorsText').className = 'creditsText hide';
-    gn('purpleguy').className = 'purple hide';
-    gn('blueguy').className = 'blue hide';
-    gn('redguy').className = 'red hide';
     gn('catface').className = 'catface hide';
-    gn('jrlogo').className = 'jrlogo hide';
 
     gn('usageQuestion').textContent = Localization.localize('USAGE_QUESTION');
     gn('useSchoolText').textContent = Localization.localize('USAGE_SCHOOL');
