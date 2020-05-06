@@ -98,7 +98,7 @@ div.frame {
 #topbar ul.topbar-nav .help.on{background: #35A8E0; height: ${css_vh(10.81)};}
 #topbar ul.topbar-nav .help.off{background: none; height: auto;}
 
-
+/* 도움말 가이드 부분 */
 #topbar ul.reference {
     width: ${css_vh(16)};
     display: inline-block;
@@ -141,31 +141,7 @@ div.frame {
     height: ${css_vh(10.81)};
 }
 
-ul#settings.reference {
-    right: ${css_vh(15.5)};
-}
-
-#topbar ul.reference .gear .gear-icon {
-    display: block;
-    width: ${css_vh(12.63)};
-    height: ${css_vh(10.03)};
-    background: url('../assets/lobby/gearOff.svg');
-    background-size: 101%;
-    padding: 0;
-    margin: auto auto;
-}
-
-#topbar ul.reference .gear.off>span {background: url('../assets/lobby/gearOff.svg'); background-size: 101%; margin: auto;}
-#topbar ul.reference .gear.on>span {background: url('../assets/lobby/gearOn.svg'); background-size: 101%; margin: auto;}
-
-#topbar ul.reference .gear.off {background: none; height: auto;}
-#topbar ul.reference .gear.on {
-    background-color: #E8E3CA;
-    background-image: -webkit-linear-gradient(top,rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.80));
-    height: ${css_vh(10.81)};
-}
-
-
+/* ------------------------------------------------------------ */
 /*contents*/
 
 .topsection {
