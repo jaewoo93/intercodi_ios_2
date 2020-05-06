@@ -39,6 +39,8 @@ export default class Lobby {
         ScratchAudio.addSound('sounds/', 'tap.wav', ScratchAudio.uiSounds);
         ScratchAudio.addSound('sounds/', 'cut.wav', ScratchAudio.uiSounds);
         ScratchAudio.init();
+
+        // 처음 포커스 home tab 설정
         Lobby.setPage(place ? place : 'home');
 
         if (window.Settings.settingsPageDisabled) {
@@ -48,11 +50,6 @@ export default class Lobby {
         gn('hometab').ontouchstart = function () {
             if (gn('hometab').className != 'home on') {
                 Lobby.setPage('home');
-            }
-        };
-        gn('helptab').ontouchstart = function () {
-            if (gn('helptab').className != 'help on') {
-                Lobby.setPage('help');
             }
         };
         gn('booktab').ontouchstart = function () {
@@ -119,11 +116,6 @@ export default class Lobby {
             ScratchAudio.sndFX('tap.wav');
             Lobby.loadProjects(div);
             break;
-        case 'help':
-            busy = true;
-            ScratchAudio.sndFX('tap.wav');
-            Lobby.loadSamples(div);
-            break;
         case 'book':
             Lobby.loadGuide(div);
             break;
@@ -148,21 +140,6 @@ export default class Lobby {
         var div = newHTML('div', 'htmlcontents home', p);
         div.setAttribute('id', 'htmlcontents');
         Home.init();
-    }
-
-    static loadSamples (p) {
-        gn('topsection').className = 'topsection help';
-        gn('tabheader').textContent = Localization.localize('QUICK_INTRO');
-        gn('subtitle').textContent = Localization.localize('SAMPLE_PROJECTS');
-        gn('footer').className = 'footer off';
-        gn('wrapc').scrollTop = 0;
-        gn('wrapc').className = 'contentwrap noscroll';
-        var div = newHTML('div', 'htmlcontents help', p);
-        div.setAttribute('id', 'htmlcontents');
-        document.ontouchmove = function (e) {
-            e.preventDefault();
-        };
-        Samples.init();
     }
 
     static loadGuide (p) {
@@ -224,6 +201,8 @@ export default class Lobby {
             div.removeChild(div.childNodes[0]);
         }
         var url;
+
+        // 도움말 카테고리 선택 부분
         switch (page) {
         case 'about':
             url = host + 'about.html';

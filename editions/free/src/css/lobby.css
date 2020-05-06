@@ -61,6 +61,7 @@ div.frame {
     background: white;
 }
 
+/* 로비 - 뒤로 가기 버튼 부분 */
 #topbar ul.topbar-nav li.logo {
     width: ${css_vh(32)};
 }
@@ -75,6 +76,7 @@ div.frame {
     margin: auto auto;
 }
 
+/* 홈 탭 부분 */
 #topbar ul.topbar-nav li.home {
     width: ${css_vh(16)};
 }
@@ -89,20 +91,7 @@ div.frame {
     margin: auto auto;
 }
 
-#topbar ul.topbar-nav li.help {
-    width: ${css_vh(16)};
-}
-
- #topbar ul.topbar-nav .help .help-icon {
-    display: block;
-    width: ${css_vh(12.63)};
-    height: ${css_vh(10.03)};
-    background: url('../assets/lobby/help.svg');
-    background-size: 101%;
-    padding: 0;
-    margin: auto auto;
-} 
-
+/* 홈 탭 눌렀을 때, 안 눌렀을 때 반응 */
 #topbar ul.topbar-nav .home.on{background: #F9A737; height: ${css_vh(10.81)};}
 #topbar ul.topbar-nav .home.off{background: none; height: auto;}
 

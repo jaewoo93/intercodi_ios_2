@@ -144,9 +144,10 @@ function indexGohome () {
 //     window.location.href = 'home.html?place=gear';
 // }
 
+// help버튼 클릭 시 크리모 홈페이지 이동 
 function indexGettingstarted () {
     ScratchAudio.sndFX('tap.wav');
-    // window.location.href = 'gettingstarted.html?place=home';
+    //window.location.href = 'gettingstarted.html?place=home';
     window.location.href = 'https://www.creamo.co.kr'
 }
 

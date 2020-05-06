@@ -15,12 +15,6 @@ export function homeMain () {
 }
 
 function homeGoBack () {
-    window.location.href = 'index.html?back=yes';
-}
-
-function homeStrings () {
-    gn('abouttab-text').textContent = Localization.localize('ABOUT_SCRATCHJR');
-    gn('interfacetab-text').textContent = Localization.localize('INTERFACE_GUIDE');
-    gn('painttab-text').textContent = Localization.localize('PAINT_EDITOR_GUIDE');
-    gn('blockstab-text').textContent = Localization.localize('BLOCKS_GUIDE');
+    // window.location.href = 'index.html?back=yes'; 2초 로딩 포함 됨
+    window.location.href = 'index.html?back=no';        // 2초 로딩 없이 시작화면
 }
