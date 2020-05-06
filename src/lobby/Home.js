@@ -281,8 +281,9 @@ export default class Home {
         var label = newHTML('div', 'projecttitle', tb);
 
         // 저장 프로젝트명 띄우는 기능
-        //var txt = newHTML('h5', undefined, label);
-        //txt.textContent = data.name;
+        var txt = newHTML('h5', undefined, label);
+        txt.textContent = data.name;
+        // -----------------------------------------
 
         var bow = newHTML('div', 'share', tb);
         var ribbonHorizontal = newHTML('div', 'ribbonHorizontal', tb);

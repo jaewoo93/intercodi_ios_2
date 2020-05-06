@@ -35,6 +35,8 @@
     background:  url('../assets/lobby/newproject.png');
     background-size: 100%;
 }
+
+/* 캐릭터 화면의 개수에 따라 p1 ~ p4 결정. 그러나 우리는 화면이 아예 없기 때문에 p1으로 고정됨 */
 .aproject.p1 {
     background:  url('../assets/lobby/project1.png');
     background-size: 100%;
@@ -51,6 +53,7 @@
     background:  url('../assets/lobby/project4.png');
     background-size: 100%;
 }
+/* ---------------------------------------------------------- */
 
 .projecttitle {
     height: ${30 * scaleMultiplier}px;
