@@ -146,7 +146,8 @@ function indexGohome () {
 
 function indexGettingstarted () {
     ScratchAudio.sndFX('tap.wav');
-    window.location.href = 'gettingstarted.html?place=home';
+    // window.location.href = 'gettingstarted.html?place=home';
+    window.location.href = 'https://www.creamo.co.kr'
 }
 
 function indexSetUsage (e) {
