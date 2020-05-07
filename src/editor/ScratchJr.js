@@ -185,6 +185,7 @@ export default class ScratchJr {
         document.body.scrollTop = 0;
         time = (new Date()) - 0;
         var urlvars = getUrlVars();
+
         iOS.hascamera();
         ScratchJr.log('starting the app');
         BlockSpecs.initBlocks();

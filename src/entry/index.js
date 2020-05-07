@@ -31,9 +31,9 @@ function indexFirstTime () {
     gn('catface').className = 'catface hide';
 
     // 무슨 기능인지는 모르겠지만 필요없다고 판단.
-    // if (window.Settings.edition == 'PBS') {
-    //     gn('startcode').className = 'catlogo show';
-    // }
+    if (window.Settings.edition == 'PBS') {
+        gn('startcode').className = 'catlogo show';
+    }
 
     // 설치 시 record 권한 허용 묻는 부분
     // iOS.askpermission();
@@ -54,39 +54,36 @@ function indexFirstTime () {
 }
 
 function indexLoadOptions () {
-    indexLoadStart();
-    // if (window.Settings.edition != 'PBS' && AppUsage.askForUsage()) {
-    //     indexLoadUsage();
-    // } else {
-    //     indexLoadStart();
-    // }
+    if (window.Settings.edition != 'PBS' && AppUsage.askForUsage()) {
+        indexLoadUsage();
+    } else {
+        indexLoadStart();
+    }
 }
 
 function indexLoadStart (afterUsage) {
-    // if (window.Settings.edition == 'PBS') {
+    if (window.Settings.edition == 'PBS') {
         
-    // } else {
+    } else {
 
-    //     if (afterUsage) {
-    //         gn('catface').className = 'catface show';
-    //         gn('usageQuestion').className = 'usageQuestion hide';
-    //         gn('usageSchool').className = 'usageSchool hide';
-    //         gn('usageHome').className = 'usageHome hide';
-    //         gn('usageOther').className = 'usageOther hide';
-    //         gn('usageNoanswer').className = 'usageNoanswer hide';
-    //     }
-    //     iOS.setAnalyticsPlacePref(AppUsage.currentUsage);
-    // }
+        if (afterUsage) {
+            gn('usageQuestion').className = 'usageQuestion hide';
+            gn('usageSchool').className = 'usageSchool hide';
+            gn('usageHome').className = 'usageHome hide';
+            gn('usageOther').className = 'usageOther hide';
+            gn('usageNoanswer').className = 'usageNoanswer hide';
+        }
+        iOS.setAnalyticsPlacePref(AppUsage.currentUsage);
+    }
 
-    // if (afterUsage) {
-    //     gn('catface').className = 'catface show';
-    //     gn('usageQuestion').className = 'usageQuestion hide';
-    //     gn('usageSchool').className = 'usageSchool hide';
-    //     gn('usageHome').className = 'usageHome hide';
-    //     gn('usageOther').className = 'usageOther hide';
-    //     gn('usageNoanswer').className = 'usageNoanswer hide';
-    // }
-    // iOS.setAnalyticsPlacePref(AppUsage.currentUsage);
+    if (afterUsage) {
+        gn('usageQuestion').className = 'usageQuestion hide';
+        gn('usageSchool').className = 'usageSchool hide';
+        gn('usageHome').className = 'usageHome hide';
+        gn('usageOther').className = 'usageOther hide';
+        gn('usageNoanswer').className = 'usageNoanswer hide';
+    }
+    iOS.setAnalyticsPlacePref(AppUsage.currentUsage);
     
     // 2초 로딩 후 화면 전환
     gn('frame2').className = 'frame2 show';
@@ -99,15 +96,18 @@ function indexLoadStart (afterUsage) {
     {
         e.preventDefault();
     };
-    // if (isAndroid) {
-    //     AndroidInterface.notifySplashDone();
-    // }
+    if (isAndroid) {
+        AndroidInterface.notifySplashDone();
+    }
 }
 
 function indexLoadUsage () {
-    gn('authors').className = 'credits show';
+    gn('frame2').className = 'frame2 show';
+    gn('authors').className = 'credits hide';
     gn('authorsText').className = 'creditsText hide';
-    gn('catface').className = 'catface hide';
+    gn('catface').className = 'catface show';
+    gn('gettings').className = 'gettings show';
+    gn('startcode').className = 'startcode show';
 
     gn('usageQuestion').textContent = Localization.localize('USAGE_QUESTION');
     gn('useSchoolText').textContent = Localization.localize('USAGE_SCHOOL');
@@ -115,11 +115,11 @@ function indexLoadUsage () {
     gn('useOtherText').textContent = Localization.localize('USAGE_OTHER');
     gn('usageNoanswerText').textContent = Localization.localize('USAGE_NONE');
 
-    gn('usageQuestion').className = 'usageQuestion show';
-    gn('usageSchool').className = 'usageSchool show';
-    gn('usageHome').className = 'usageHome show';
-    gn('usageOther').className = 'usageOther show';
-    gn('usageNoanswer').className = 'usageNoanswer show';
+    gn('usageQuestion').className = 'usageQuestion hide';
+    gn('usageSchool').className = 'usageSchool hide';
+    gn('usageHome').className = 'usageHome hide';
+    gn('usageOther').className = 'usageOther hide';
+    gn('usageNoanswer').className = 'usageNoanswer hide';
     gn('usageSchool').ontouchend = indexSetUsage;
     gn('usageHome').ontouchend = indexSetUsage;
     gn('usageOther').ontouchend = indexSetUsage;

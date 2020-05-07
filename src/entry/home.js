@@ -15,8 +15,7 @@ export function homeMain () {
 }
 
 function homeGoBack () {
-    // window.location.href = 'index.html?back=yes'; 2초 로딩 포함 됨
-    window.location.href = 'index.html?back=no';        // 2초 로딩 없이 시작화면
+    window.location.href = 'index.html?back=yes';        // 시작화면으로 되돌아가기
 }
 
 // 사용하지 않지만 없애버리면 밑에 프로젝트 부분이 없어진다
