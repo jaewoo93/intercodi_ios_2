@@ -25,13 +25,19 @@ export function indexMain () {
 
 // 첫 홈 화면
 function indexFirstTime () {
+    gn('frame2').className = 'frame2 hide'
     gn('authors').className = 'credits show';
     gn('authorsText').className = 'creditsText show';
     gn('catface').className = 'catface hide';
-    if (window.Settings.edition == 'PBS') {
-        gn('startcode').className = 'catlogo show';
-    }
-    iOS.askpermission(); // ask for sound recording
+
+    // 무슨 기능인지는 모르겠지만 필요없다고 판단.
+    // if (window.Settings.edition == 'PBS') {
+    //     gn('startcode').className = 'catlogo show';
+    // }
+
+    // 설치 시 record 권한 허용 묻는 부분
+    // iOS.askpermission();
+
     setTimeout(function () {
         iOS.hidesplash(doit);
     }, 500);
@@ -48,41 +54,42 @@ function indexFirstTime () {
 }
 
 function indexLoadOptions () {
-   
-    if (window.Settings.edition != 'PBS' && AppUsage.askForUsage()) {
-        indexLoadUsage();
-    } else {
-        indexLoadStart();
-    }
+    indexLoadStart();
+    // if (window.Settings.edition != 'PBS' && AppUsage.askForUsage()) {
+    //     indexLoadUsage();
+    // } else {
+    //     indexLoadStart();
+    // }
 }
 
 function indexLoadStart (afterUsage) {
-    if (window.Settings.edition == 'PBS') {
+    // if (window.Settings.edition == 'PBS') {
         
-    } else {
+    // } else {
 
-        if (afterUsage) {
-            gn('catface').className = 'catface show';
-            gn('usageQuestion').className = 'usageQuestion hide';
-            gn('usageSchool').className = 'usageSchool hide';
-            gn('usageHome').className = 'usageHome hide';
-            gn('usageOther').className = 'usageOther hide';
-            gn('usageNoanswer').className = 'usageNoanswer hide';
-        }
-        iOS.setAnalyticsPlacePref(AppUsage.currentUsage);
-    }
+    //     if (afterUsage) {
+    //         gn('catface').className = 'catface show';
+    //         gn('usageQuestion').className = 'usageQuestion hide';
+    //         gn('usageSchool').className = 'usageSchool hide';
+    //         gn('usageHome').className = 'usageHome hide';
+    //         gn('usageOther').className = 'usageOther hide';
+    //         gn('usageNoanswer').className = 'usageNoanswer hide';
+    //     }
+    //     iOS.setAnalyticsPlacePref(AppUsage.currentUsage);
+    // }
 
-    if (afterUsage) {
-        gn('catface').className = 'catface show';
-        gn('usageQuestion').className = 'usageQuestion hide';
-        gn('usageSchool').className = 'usageSchool hide';
-        gn('usageHome').className = 'usageHome hide';
-        gn('usageOther').className = 'usageOther hide';
-        gn('usageNoanswer').className = 'usageNoanswer hide';
-    }
-    iOS.setAnalyticsPlacePref(AppUsage.currentUsage);
+    // if (afterUsage) {
+    //     gn('catface').className = 'catface show';
+    //     gn('usageQuestion').className = 'usageQuestion hide';
+    //     gn('usageSchool').className = 'usageSchool hide';
+    //     gn('usageHome').className = 'usageHome hide';
+    //     gn('usageOther').className = 'usageOther hide';
+    //     gn('usageNoanswer').className = 'usageNoanswer hide';
+    // }
+    // iOS.setAnalyticsPlacePref(AppUsage.currentUsage);
     
     // 2초 로딩 후 화면 전환
+    gn('frame2').className = 'frame2 show';
     gn('authors').className = 'credits hide';
     gn('gettings').className = 'gettings show';
     gn('startcode').className = 'startcode show';
