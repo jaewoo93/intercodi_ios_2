@@ -142,7 +142,7 @@
     margin-top: .5em;
 }
 
-.usageSchool {
+/* .usageSchool {
     position: absolute;
     top: 45%;
     left: 17%;
@@ -182,7 +182,7 @@
 }
 
 .usageOther.hide {display: none;}
-.usageOther.show {display: block;}
+.usageOther.show {display: block;} */
 
 .usageNoanswer {
     position: absolute;
