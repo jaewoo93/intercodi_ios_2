@@ -9,20 +9,29 @@ div.frame {
     position: relative;
     width: 100%;
     height: 100%;
+    background: #00FFFF;
     overflow: hidden;
     -webkit-overflow-scrolling: none;
     -webkit-user-select: none;
-    background-color: #EAF8F9;
+    /* 배경 색 그라데이션 효과 */
+    background-image: -webkit-linear-gradient(top,rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0.70) 10%, rgba(255, 255, 255, 0.70) 90%, rgba(255, 255, 255, 0));
 }
 
 /* top bar */
 #topbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    height: 10.8%;
+    right: 0;
+    height: ${css_vh(10.42)};
+    text-shadow: none;
     z-index: 100;
-    background-color: #B2E4F8;
+    background-color: #E8E3CA;
+    /* 배경 색 그라데이션 효과 */
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    border-bottom: 1px solid #ADACA6;
+    border-top: 1px solid #E8E3CA;
+    -webkit-box-shadow: 0px ${1 * scaleMultiplier}px ${1 * scaleMultiplier}px #fff;
     width: 100%;
 }
 
@@ -51,6 +60,21 @@ div.frame {
     width: 1px;
     height: ${css_vh(10.42)};
     background: white;
+}
+
+/* 로비 - 뒤로 가기 버튼 부분 */
+#topbar ul.topbar-nav li.logo {
+    width: ${css_vh(32)};
+}
+
+#topbar ul.topbar-nav .logo .logo-icon {
+    display: block;
+    width: ${css_vh(28.65)};
+    height: ${css_vh(10.03)};
+    background: url('../assets/lobby/scratchJrlogo.svg');
+    background-size: 101%;
+    padding: 0;
+    margin: auto auto;
 }
 
 /* 홈 탭 부분 */
@@ -148,7 +172,7 @@ div.frame {
 }
 
 .topsection.home > div.tabtitle {
-    height: 0%;
+    height: ${css_vh(5.86)};
     background: #F9A737;
     margin: 0;
     padding: 0;
@@ -158,6 +182,18 @@ div.frame {
     vertical-align: middle;
     border-bottom: 1px solid #ADACA6;
     width: 100%;
+}
+
+.topsection.help > div.tabtitle {
+    height: ${css_vh(5.86)};
+    background: #35A8E0;
+    border-bottom: 1px solid #ADACA6;
+    margin: 0;
+    padding: 0;
+    padding-left: 2%;
+    text-shadow: 0 2px #0F86B5;
+    line-height: ${css_vh(5.86)};
+    vertical-align: middle;
 }
 
 .topsection.home >div.tabicon {
@@ -263,11 +299,16 @@ div.localizationselect.selected:after {
 /* footer */
 
 #footer {
-    position: absolute;
-    bottom: 0%;
-    height: 10.8%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: ${css_vh(10.4)};
+    border: 0 solid #ADACA6;
+    border-bottom: 1px solid #ADACA6;
+    border-top: 1px solid #ADACA6;
     z-index: 11000;
-    background: #B2E4F8;
+    background: #E8E3CA;
     -webkit-user-select: none;
 }
 
@@ -355,9 +396,9 @@ div.localizationselect.selected:after {
 
 *.contentwrap {
     position: absolute;
-    top: 10.8%;
     width: 100%;
-    height: 78.4%;
+    height: 100%;
+    min-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -378,6 +419,8 @@ div.localizationselect.selected:after {
 .htmlcontents {
     margin: 0px auto;
     width: 100%;
+    border: 0;
+    padding: ${80 * scaleMultiplier}px 0px ${50 * scaleMultiplier}px;
     height: auto;
 }
 
@@ -393,18 +436,38 @@ div.localizationselect.selected:after {
     height: auto;
 }
 
+
+.htmlcontents.help {
+    padding: ${css_vh(10.8)} 0px ${css_vw(0.97)};
+    height: 89.1%;
+}
+
+.htmlcontents.help .samples {
+    position: relative;
+    padding: 0px;
+    top: 37%;
+    left: 3.6%;
+    margin: 0px auto;
+    padding: 10px 0 0;
+    width: 100%;
+    height: 62.4%;
+    overflow: hidden;
+}
+
+.htmlcontents.help .samples.off {display: none;}
+.htmlcontents.help .samples.on {display: block;}
+
 .htmlcontents.scrolled {
     position: absolute;
-    height: auto;
-    width: 100%;
-    background-image: url('../inapp/images/about_creamo.png');
-    background-repeat: no-repeat;
+    padding: 0px;
+    height: ${css_vh(79.18)};
+    top: ${css_vh(10.42)};
 }
 
 .htmlcontents.fixed {
     position: absolute;
     padding: 0px;
-    height: 100%;
+    height: ${css_vh(79.18)};
     top: ${css_vh(10.42)};
 }
 

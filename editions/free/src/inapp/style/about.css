@@ -7,7 +7,7 @@ html {
 body {
   color: #595959;
   font-family: Roboto;
-  padding: ${css_vh(2)} ${css_vh(2)};
+  padding: ${css_vh(2)} 6.05vw ${css_vh(2)};
   margin: ${css_vh(2.6)} auto;
   width: ${css_vw(87.89)};
   height: auto;
