@@ -142,7 +142,7 @@ export default class Lobby {
     static loadProjects (p) {
         document.ontouchmove = undefined;
         gn('topsection').className = 'topsection home';
-        gn('tabheader').textContent = Localization.localize('MY_PROJECTS');
+        // gn('tabheader').textContent = Localization.localize('MY_PROJECTS');
         gn('subtitle').textContent = '';
         gn('footer').className = 'footer off';
         gn('wrapc').scrollTop = 0;
