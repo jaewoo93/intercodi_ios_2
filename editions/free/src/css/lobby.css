@@ -6,10 +6,10 @@ html {
 }
 
 div.frame {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    background: #EAF9F9;
+    background: #EAF8F9;
     overflow: hidden;
     -webkit-overflow-scrolling: none;
     -webkit-user-select: none;
@@ -17,11 +17,11 @@ div.frame {
 
 /* top bar */
 #topbar {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
-    height: 10.8%;
+    height: ${css_vh(10.42)};
     z-index: 100;
     background-color: #B2E4F8;
     width: 100%;
@@ -73,50 +73,49 @@ div.frame {
 #topbar ul.topbar-nav .home.on{background: #F9A737; height: ${css_vh(10.81)};}
 #topbar ul.topbar-nav .home.off{background: none; height: auto;}
 
-#topbar ul.topbar-nav .help.on{background: #35A8E0; height: ${css_vh(10.81)};}
-#topbar ul.topbar-nav .help.off{background: none; height: auto;}
-
 /* 도움말 가이드 부분 */
 #topbar ul.reference {
     width: ${css_vh(16)};
     display: inline-block;
-    list-style-type: none;
-    margin: 0px;
-    position: absolute;
     right: -5px;
-
-    /* on initial page load, the element isn't floated all the way to the right */
     float: right;
 }
+    
 
 #topbar ul.reference>li {
-    width: ${css_vh(16)};
+    position: relative;
     display: inline-block;
-    margin: 1px 0px 0px;
-    padding: 0px;
+    width: 100%;
+    height: 100%;
     vertical-align: top;
-    line-height:  ${css_vh(10.29)};
-    border-left: 1px solid white;
 }
 
 #topbar ul.reference .book .book-icon {
     display: block;
     width: ${css_vh(12.63)};
     height: ${css_vh(10.03)};
-    background: url('../assets/lobby/bookOff.svg');
-    background-size: 101%;
-    padding: 0;
-    margin: auto auto;
-} 
+    background-image: url('../assets/lobby/helpNopushed.svg');
+    backgorund-size: 100% 100%;
+}
 
-#topbar ul.reference .book.off>span {background: url('../assets/lobby/bookOff.svg'); background-size: 101%;}
-#topbar ul.reference .book.on>span {background: url('../assets/lobby/bookOn.svg'); background-size: 101%; margin: 0px ${css_vh(0.8)};}
+#topbar ul.reference .book.off>span {
+    background-image: url('../assets/lobby/helpNopushed.svg');
+    background-size: 100% 100%;
+}
+#topbar ul.reference .book.on>span {
+    background-image: url('../assets/lobby/helpPushed.svg');
+    background-size: 100% 100%;
+}
 
-#topbar ul.reference .book.off {background: none; height: auto;}
+#topbar ul.reference .book.off {
+    background: none;
+    height: auto;
+}
+
 #topbar ul.reference .book.on {
-    background-color: #E8E3CA;
-    background-image: -webkit-linear-gradient(top,rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.80));
-    height: ${css_vh(10.81)};
+    background-image: url('../assets/lobby/homePushBackground.svg');
+    background-size: 100% 100%;
+    height: ${css_vh(10.81)}
 }
 
 /* ------------------------------------------------------------ */

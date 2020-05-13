@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: #F7F6EE;
+    background: #EAF8F9;
     margin-top: ${css_vh(6)};
     margin-bottom: ${css_vh(22.20)};
 }
