@@ -21,111 +21,108 @@ div.frame {
     top: 0;
     left: 0;
     right: 0;
-    height: ${css_vh(10.42)};
+    width: 100%;
+    height: 10.83%;
+    /* height: ${css_vh(10.42)}; */
     z-index: 100;
     background-color: #B2E4F8;
-    width: 100%;
 }
 
 #topbar ul.topbar-nav {
-    display: inline-block;
+    display: inline;
     list-style-type: none;
-    margin: 0px;
-    width: ${css_vh(78.13)};
+    width: 50%;
+    height: 100%;
     position: absolute;
     left: 0px;
 }
 
 #topbar ul.topbar-nav>li {
-    display: inline-block;
-    margin: 1px 0px 0px;
-    padding: 0px;
-    vertical-align: top;
-    line-height:  ${css_vh(10.29)};
-    border-right: 1px solid #ADACA6;
-}
-
-#topbar ul.topbar-nav>div {
-    display: inline-block;
-    margin: 1px -3px 0px;
-    padding: 0px;
-    width: 1px;
-    height: ${css_vh(10.42)};
-    background: white;
+    display: inline;
+    list-style-type: none;
 }
 
 /* 홈 탭 부분 */
 #topbar ul.topbar-nav li.home {
-    width: ${css_vh(16)};
+    display: inline-block;
+    width: 16.6%;
+    height: 100%;
+    margin-top: 5px;
+    margin-left: 5px;
 }
 
 #topbar ul.topbar-nav .home .home-icon {
     display: block;
-    width: ${css_vh(12.63)};
-    height: ${css_vh(10.03)};
-    background: url('../assets/lobby/house.svg');
-    background-size: 101%;
-    padding: 0;
-    margin: auto auto;
+    margin-left: 11px;
+    margin-top: 11px;
+    width: ${css_vh(8)};
+    height: ${css_vh(7)};
+    background-image: url('../assets/lobby/home_noPush.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 /* 홈 탭 눌렀을 때, 안 눌렀을 때 반응 */
-#topbar ul.topbar-nav .home.on{background: #F9A737; height: ${css_vh(10.81)};}
+#topbar ul.topbar-nav .home.on{
+    background-image: url('../assets/lobby/homePushBackground.svg');
+    background-repeat: no-repeat;
+}
+
 #topbar ul.topbar-nav .home.off{background: none; height: auto;}
+/* ----------------------------------------------------------------------------  */
 
 /* 도움말 가이드 부분 */
 #topbar ul.reference {
-    width: ${css_vh(16)};
-    display: inline-block;
-    right: -5px;
-    float: right;
+    display: inline;
+    list-style-type: none;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: 75%;
 }
-    
+
 
 #topbar ul.reference>li {
-    position: relative;
+    display: inline;
+    list-style-type: none;
+    float: right;
+}
+
+#topbar ul.reference li.book {
     display: inline-block;
-    width: 100%;
+    width: 33.2%;
     height: 100%;
-    vertical-align: top;
+    margin-top: 5px;
+    margin-right: 5px; 
 }
 
 #topbar ul.reference .book .book-icon {
     display: block;
-    width: ${css_vh(12.63)};
-    height: ${css_vh(10.03)};
-    background-image: url('../assets/lobby/helpNopushed.svg');
-    backgorund-size: 100% 100%;
-}
-
-#topbar ul.reference .book.off>span {
+    margin-left: 12px;
+    margin-top: 11px;
+    width: ${css_vh(8)};
+    height: ${css_vh(7)};
     background-image: url('../assets/lobby/helpNopushed.svg');
     background-size: 100% 100%;
-}
-#topbar ul.reference .book.on>span {
-    background-image: url('../assets/lobby/helpPushed.svg');
-    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
-#topbar ul.reference .book.off {
-    background: none;
-    height: auto;
-}
-
-#topbar ul.reference .book.on {
+/* 도움말 탭 눌렀을 때, 안 눌렀을 때 반응 */
+#topbar ul.reference .book.on{
     background-image: url('../assets/lobby/homePushBackground.svg');
-    background-size: 100% 100%;
-    height: ${css_vh(10.81)}
+    background-repeat: no-repeat;
 }
 
-/* ------------------------------------------------------------ */
-/*contents*/
+#topbar ul.reference .book.off{background: none;}
+/* ----------------------------------------------------------------------------  */
 
+
+/*contents*/
 .topsection {
     position: fixed;
     left: 0;
     right: 0;
-    margin: ${css_vh(10.81)} auto 0px;
+    margin: 0px auto 0px;
     height: 0px;
     border: 0;
     display: inline-block;
@@ -385,7 +382,7 @@ div.localizationselect.selected:after {
 }
 
 .htmlcontents.home {
-    padding: ${css_vh(17)} 0px ${css_vh(6.5)};
+    padding: ${css_vh(8)} 0px ${css_vh(6.5)};
     height: auto;
 }
 
