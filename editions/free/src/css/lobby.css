@@ -341,12 +341,12 @@ div.localizationselect.selected:after {
     height: ${css_vh(6.85)};
     margin-top: ${css_vh(2.5)};
     margin-left: ${css_vw(4)};
-    background: url('../assets/lobby/AboutCREAMO.svg');
+    background: url('../assets/lobby/AboutCREAMO_off.svg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-#footer ul.footer-nav .tab .interface-icon { background: url('../assets/lobby/SmartBlockGuide.svg'); background-size: 100% 100%; background-repeat: no-repeat;}
-#footer ul.footer-nav .tab .paint-icon {background: url('../assets/lobby/CodingBlockGuide.svg'); background-size: 100% 100%; background-repeat: no-repeat;}
+#footer ul.footer-nav .tab .interface-icon { background: url('../assets/lobby/SmartBlockGuide_off.svg'); background-size: 100% 100%; background-repeat: no-repeat;}
+#footer ul.footer-nav .tab .paint-icon {background: url('../assets/lobby/CodingBlockGuide_off.svg'); background-size: 100% 100%; background-repeat: no-repeat;}
 
 #footer ul.footer-nav .tab.on .about-icon {
     width: ${css_vw(22.87)};
