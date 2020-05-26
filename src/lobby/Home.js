@@ -1,4 +1,4 @@
-//////////////////////////////////////////////////
+/////////////////////////////////////////////////
 // Home Screen
 //////////////////////////////////////////////////
 
@@ -162,7 +162,6 @@ export default class Home {
     }
 
     static createNewProject () {
-        console.log("what1")
         iOS.analyticsEvent('lobby', 'project_created');
         var obj = {};
         // XXX: for localization, the new project name should likely be refactored
@@ -185,18 +184,18 @@ export default class Home {
     static getNextName (name) {
         var pn = [];
         var div = gn('scrollarea');
-        for (var i = 0; i < div.childElementCount; i++) {
-            console.log
-            if (div.childNodes[0].id == 'newproject') {
+        var i;
+        for (i = 0; i < div.childElementCount; i++) {
+            if (div.childNodes[i].id == 'newproject') {
                 continue;
             }
             pn.push(div.childNodes[i].childNodes[1].childNodes[0].textContent);
         }
         var n = 1;
-        while (pn.indexOf(name + ' ' + n) > -1) {
+        if(pn.indexOf(n) != -1) {       // 기존에 프로젝트 번호가 있다면 다음 번호로 증가
             n++;
         }
-        return name + ' ' + n;
+        return name + ' ' + i;
     }
 
     static removeProjThumb () {
@@ -277,13 +276,10 @@ export default class Home {
         tb.type = 'projectthumb';
         tb.thumb = thumb.md5;
         var mt = newHTML('div', 'aproject p' + pc, tb);
-        Home.insertThumbnail(mt, 192, 144, thumb);
+        // Home.insertThumbnail(mt, 192, 144, thumb);
         var label = newHTML('div', 'projecttitle', tb);
-
-        // 저장 프로젝트명 띄우는 기능
-        var txt = newHTML('h5', undefined, label);
+        var txt = newHTML('h4', undefined, label);
         txt.textContent = data.name;
-        // -----------------------------------------
 
         var bow = newHTML('div', 'share', tb);
         var ribbonHorizontal = newHTML('div', 'ribbonHorizontal', tb);
