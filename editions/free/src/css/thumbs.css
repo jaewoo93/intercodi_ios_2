@@ -34,8 +34,8 @@
 }
 
 .aproject.empty {
-    background:  url('../assets/lobby/newproject.png');
-    background-size: 100%;
+    background:  url('../assets/lobby/createNewProject.svg');
+    background-size: 100% 100%;
 }
 
 /* 캐릭터 화면의 개수에 따라 p1 ~ p4 결정. 그러나 우리는 화면이 아예 없기 때문에 p1으로 고정됨 */
@@ -61,14 +61,11 @@
     background-color: #fff;
     padding-top: 17%;
     padding-bottom: 20%;
-    margin-top: 4%;
-    height: ${40 * scaleMultiplier}px;
-    width: ${css_vh(25)};
+    width: ${css_vh(28.91)};
+    height: ${55 * scaleMultiplier}px;
     line-height: ${15 * scaleMultiplier}px;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 
-    border-color: #d3d3d3;
+    border-radius: 10%;
+    box-shadow: 2px 2px #EAF8F9;
 }
 
 .projecttitle h4 {
@@ -77,6 +74,8 @@
     text-align: center;
     color: #355E7C;
     font-size: ${30 * scaleMultiplier}px;
+    margin-left: 7%;
+    margin-top: 5%;
     width: ${css_vh(25)};
     overflow: hidden;
     text-overflow: ellipsis;
