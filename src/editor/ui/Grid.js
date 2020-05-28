@@ -89,7 +89,7 @@ export default class Grid {
     }
 
     static createNumbering (w, h) {
-        var row = newDiv(gn('btStart'), 0, 0, w - 46 - 30, 24, {
+        var row = newDiv(gn('codeStart'), 0, 0, w - 46 - 30, 24, {
             position: 'absolute',
             zIndex: ScratchJr.layerTop
         });
@@ -108,7 +108,7 @@ export default class Grid {
             p.setAttribute('class', 'stylelabel');
             dx += offset;
         }
-        var column = newDiv(gn('btStart'), 0, 0, 24, h + 24, {
+        var column = newDiv(gn('codeStart'), 0, 0, 24, h + 24, {
             position: 'absolute',
             zIndex: ScratchJr.layerTop
         });

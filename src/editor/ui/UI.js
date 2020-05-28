@@ -48,8 +48,8 @@ export default class UI {
  
     static layout () {
         UI.topSection();
-        UI.BottomSection();
         UI.middleSection();
+        UI.BottomSection();
         UI.fullscreenControls();
         UI.createFormForText(frame);
         ScratchJr.setupKeypad();
@@ -762,24 +762,23 @@ export default class UI {
     //////////////////////////////
 
     static stageArea (inner) {
-        var outerDiv = newHTML('div', 'centerpanel', inner);
+        var ssl = newHTML('div', 'centerpanel', inner);
 
-        var div = newHTML('div', 'btStart', outerDiv);       
-        div.setAttribute('id', 'btStart');        
+        var codeStart = newHTML('div', 'codeStart', ssl);       
+        codeStart.setAttribute('id', 'codeStart');        
         
-
-        ScratchJr.stage = new Stage(div);
-        Grid.init(div);
+        ScratchJr.stage = new Stage(codeStart);
+        Grid.init(codeStart);
         if(ScratchJr.isEditable()) {
-            UI.creatTopBarClicky(div, 'addtext', 'addText', UI.addText);
-            UI.creatTopBarClicky(div, 'setbkg', 'changeBkg', UI.addBackground);
+            UI.creatTopBarClicky(codeStart, 'addtext', 'addText', UI.addText);
+            UI.creatTopBarClicky(codeStart, 'setbkg', 'changeBkg', UI.addBackground);
          }
-        UI.creatTopBarClicky(div, 'grid', 'gridToggle off', UI.switchGrid);
-        UI.creatTopBarClicky(div, 'go', 'go on', UI.toggleRun);
+        UI.creatTopBarClicky(codeStart, 'grid', 'gridToggle off', UI.switchGrid);
+        UI.creatTopBarClicky(codeStart, 'go', 'go on', UI.toggleRun);
        
        
 
-        UI.creatTopBarClicky(div, 'resetall', 'resetall', UI.resetAllSprites);
+        UI.creatTopBarClicky(codeStart, 'resetall', 'resetall', UI.resetAllSprites);
         // UI.creatTopBarClicky(div, 'full', 'fullscreen', ScratchJr.fullScreen);
         UI.toggleGrid(true);
     }
@@ -895,7 +894,7 @@ export default class UI {
     }
 
     static quitFullScreen () {
-        var div = gn('btStart');
+        var div = gn('codeStart');
         div.appendChild(gn('stage'));
         ScratchJr.stage.setStageScaleAndPosition(scaleMultiplier, 46, 74);
         gn('go').className = 'go off nopresent';

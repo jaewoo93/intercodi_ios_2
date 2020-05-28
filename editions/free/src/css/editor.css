@@ -29,8 +29,7 @@ div.frame {
 /* Container */
 *.topsection {
     background-color: none;
-    padding: ${css_vh(0)};
-    margin: ${css_vh(0)} ${css_vh(0)} ${css_vh(0)};
+    padding-top: ${css_vh(2)};
     width: ${css_vw(100)};
     height: ${css_vh(10)};
     background-size: 100% 100%;
@@ -197,9 +196,9 @@ div.frame {
 /*Editor UI*/
 /* 되돌리기 버튼 */
 #blockspalette {
+    margin-top: 10px;
     position: relative;
-    top: ${css_vh(58)};
-    height: ${css_vh(27)};
+    height: ${css_vh(20)};
     z-index: 10;
 }
 
@@ -249,6 +248,7 @@ div.frame {
 }
 /* 코딩블록 뒷배경  */
 .catbkg .catimage{
+   
     width: ${300 * scaleMultiplier}px;
     height: ${92.16 * scaleMultiplier}px;
     /* 배경 크기에 맞게 다시 요청 - 단색으로 해야 재수정 안함!! 클래스에 있어서 no-repeat를 불가함*/
@@ -260,7 +260,6 @@ div.frame {
 #blockspalette .palette{
     display: inline-block;
     position: relative;
-    top: ${css_vh(12)};
     margin: ${css_vh(0)} ${css_vh(0)} ${css_vh(0)};
     height: ${css_vh(12)};;
     width: ${724 * scaleMultiplier}px; 
@@ -439,10 +438,9 @@ z-index: 5;
 /* Scripts */
 
 .scripts {
-    background-color: none;
-    background-size: 100% 100%;
-    left: 0;
-    right: 0;
+    /* margin-top: ${css_vh(25)}; */
+    width: ${css_vw(100)};
+    height: ${css_vh(100)};
     position: absolute;
     overflow: hidden;
 }
@@ -463,8 +461,8 @@ z-index: 5;
     position: absolute;
     top: ${css_vh(2.60)};
     left: ${css_vh(3.26)};
-    width: ${css_vh(18.88)};
-    height: ${css_vh(18.88)};
+    width: ${css_vh(0)};
+    height: ${css_vh(0)};
 }
 
 .watermark > canvas{
