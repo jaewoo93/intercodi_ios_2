@@ -1,5 +1,6 @@
 /* 홈화면 및 코딩 프레임 크기조절 */
 div.frame {
+    background-color: #C3DEE3;
     width: 100%;
     height: 100%;
     position: relative;
@@ -27,31 +28,30 @@ div.frame {
 
 /* Container */
 *.topsection {
-    background-color: #fffdd0;
+    background-color: none;
     padding: ${css_vh(0)};
     margin: ${css_vh(0)} ${css_vh(0)} ${css_vh(0)};
-    width: 100%;
-    height: ${css_vh(15)};
+    width: ${css_vw(100)};
+    height: ${css_vh(10)};
     background-size: 100% 100%;
 }
 
 *.leftpanel {
+    float: left;
     position: relative;
     display: inline-block;
     margin: ${css_vh(0)};
     padding: ${css_vh(0)};
-    width: 40%;
-    height: ${css_vh(15)};
+    width: ${css_vw(50)};
+    height: ${css_vh(10)};
     z-index: 1;
 }
 
 *.centerpanel {
     position: relative;
     display: inline-block;
-    margin: ${css_vh(0)};
-    padding: ${css_vh(0)};
-    width: 60%;
-    height: ${css_vh(15)};
+    width: ${css_vw(50)};
+    height: ${css_vh(10)};
     z-index: 1;
 }
 
@@ -439,7 +439,7 @@ z-index: 5;
 /* Scripts */
 
 .scripts {
-    background-color: #fffdd0;
+    background-color: none;
     background-size: 100% 100%;
     left: 0;
     right: 0;
@@ -721,28 +721,15 @@ img.infoboxShareLoading {
 form.projectname {
     width: ${css_vh(0)};
     height: ${css_vh(0)};
-    -webkit-box-shadow: inset 0 ${2 * scaleMultiplier}px 0 rgba(255, 255, 255, 1), 0 ${scaleMultiplier}px ${2 * scaleMultiplier}px rgba(255, 255, 255,0);
-    -webkit-border-radius: ${32 * scaleMultiplier}px;
-    -webkit-box-shadow: 0px ${scaleMultiplier}px 0px #ffffff;
 }
-/* -------------------------------------------------------------------------------------------------- */
 
-/* *.pnamefield{
+*.pnamefield { 
     position: absolute;
-    margin: ${css_vh(0)} ${css_vh(0.26)} ${css_vh(0)};
-    padding: ${css_vh(0)};
-    text-align: center;
-    font-family: Roboto;
-    font-weight: normal;
-    font-size: ${css_vh(3.13)};
-    line-height: ${css_vh(4.17)};
-    -webkit-border-radius: ${36 * scaleMultiplier}px;
-    cursor: default;
-    background: white;
-    width: ${css_vh(46.88)};
-    height: ${css_vh(6.51)};
-    outline: ${css_vh(0)};
-} */
+    width: ${css_vh(0)};
+    height: ${css_vh(0)};
+}
+
+/* -------------------------------------------------------------------------------------------------- */
 
 /* .fixedinfo {
     top: ${css_vh(26.04)};
