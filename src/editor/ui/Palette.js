@@ -19,7 +19,7 @@ import {frame, gn, localx, newHTML, scaleMultiplier, isTablet, newDiv,
     setCanvasSize, hitRect, writeText, getStringSize} from '../../utils/lib';
 
 
-let blockscale = 1.0;
+let blockscale = 1.2;
 let numcat = 0; // getter
 let betweenblocks = undefined; // Set in setup()
 let blockdy = 5;
@@ -368,16 +368,16 @@ export default class Palette {
         var dx = dxblocks;
         for (var k = 0; k < list.length; k++) {
             if (list[k] == 'space') {
-                dx += 30 * blockscale;
+                dx += 40 * blockscale;
             } else {
                 // palette 블록 크기
                 var newb = Palette.newScaledBlock(pal, list[k],
-                    ((list[k] == 'repeat') ? 0.8 * scaleMultiplier : blockscale), dx, blockdy);
+                    ((list[k] == 'repeat') ? 1.0 * scaleMultiplier : blockscale), dx, blockdy);
                 newb.lift();
                 dx += betweenblocks;
             }
         }
-        dx += 30;
+        dx += 40;
         if ((n == (BlockSpecs.categories.length - 1)) && (ScratchJr.stage.pages.length > 1)) {
             Palette.addPagesBlocks(dx);
         }

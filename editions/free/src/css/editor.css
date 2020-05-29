@@ -261,9 +261,10 @@ div.frame {
 #blockspalette .palette{
     display: inline-block;
     position: relative;
-    margin: ${css_vh(0)} ${css_vh(0)} ${css_vh(0)};
-    height: ${css_vh(12)};;
-    width: ${724 * scaleMultiplier}px; 
+    margin-top: 20px;
+    margin-left: 50px;
+    height: ${css_vh(15)};
+    width: ${css_vw(80)};
     z-index:4;
     overflow: hidden;
 }
