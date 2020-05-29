@@ -144,22 +144,22 @@ export default class BlockSpecs {
             [   // 기본 블록
                 BlockSpecs.getImageFrom('assets/categories/BASIC_ON_category', 'svg'),
                 BlockSpecs.getImageFrom('assets/categories/BASIC_OFF_category', 'svg'),
-                window.Settings.categoryStartColor
+                // window.Settings.categoryStartColor      // json 파일에서 white로 수정함
             ],
             [   // LED 블록
                 BlockSpecs.getImageFrom('assets/categories/LED_ON_category', 'svg'),
                 BlockSpecs.getImageFrom('assets/categories/LED_OFF_category', 'svg'),
-                window.Settings.categoryLooksColor
+                // window.Settings.categoryLooksColor      // json 파일에서 white로 수정함
             ],
             [   // 모터 블록
                 BlockSpecs.getImageFrom('assets/categories/MOTOR_ON_category', 'svg'),
                 BlockSpecs.getImageFrom('assets/categories/MOTOR_OFF_category', 'svg'),
-                window.Settings.categoryMotionColor
+                // window.Settings.categoryMotionColor     // json 파일에서 white로 수정함
             ],
             [   // 스피커 블록
                 BlockSpecs.getImageFrom('assets/categories/SPEAKER_ON_category', 'svg'),
                 BlockSpecs.getImageFrom('assets/categories/SPEAKER_OFF_category', 'svg'),
-                window.Settings.categorySoundColor
+                // window.Settings.categorySoundColor      // json 파일에서 white로 수정함
             ]
             // [
             //     BlockSpecs.getImageFrom('assets/categories/FlowOn', 'svg'),

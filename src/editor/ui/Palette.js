@@ -61,7 +61,7 @@ export default class Palette {
         var bkg = newHTML('div', 'catbkg', sel);
         newHTML('div', 'catimage', bkg);
         
-         var leftPx = 5 * scaleMultiplier;      // category 맨 처음 왼쪽 여백
+         var leftPx = 15 * scaleMultiplier;      // category 맨 처음 왼쪽 여백
          var widthPx = 75 * scaleMultiplier;  // blockcategory 사이의 간격
 
         for (var i = 0; i < BlockSpecs.categories.length; i++) {
@@ -295,9 +295,10 @@ export default class Palette {
         return null;
     }
 
+    // category icon 관련 부분
     static createSelector (parent, n, dx, dy, spec) {
-        var pxWidth = 72 * scaleMultiplier;
-        var pxHeight = 90 * scaleMultiplier;        // category icon 크기 - pxWidth * pxHeight
+        var pxWidth = 60 * scaleMultiplier;
+        var pxHeight = 75 * scaleMultiplier;        // category icon 크기 - pxWidth * pxHeight
         var div = newDiv(parent, dx, dy, pxWidth, pxHeight, {
             position: 'absolute'
         });
@@ -314,6 +315,7 @@ export default class Palette {
         var onicon = spec[0].cloneNode(true);
         onicon.width = pxWidth;
         onicon.height = pxHeight;
+        // onicon.offsetTop = 2 * blockscale;
         div.appendChild(onicon);
         div.bkg = spec[2];
         setProps(onicon.style, {
