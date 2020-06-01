@@ -186,6 +186,12 @@ Popup *popupView;
        
           [self performSelector:@selector(Motor_left)];
      }
+     else if ([functionName isEqualToString:@"Speaker"])
+     {
+       
+          [self performSelector:@selector(Speaker)];
+     }
+
                
      return NO;
 
@@ -203,7 +209,7 @@ Popup *popupView;
 -(void)Motor_left{[CreamoBleClient sendValue:@"G"];}
 -(void)Motor_right{[CreamoBleClient sendValue:@"H"];}
 -(void)Motor_stop{[CreamoBleClient sendValue:@"I"];}
-
+-(void)Speaker{[CreamoBleClient sendValue:@"J"];}
 
  
 

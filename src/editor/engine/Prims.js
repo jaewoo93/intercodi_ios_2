@@ -69,7 +69,8 @@ export default class Prims {
         Prims.table.left = Prims.MotorLeft;
         Prims.table.motorstop = Prims.Motorstop;
 
-
+        //스피커 블록 제어 
+        Prims.table.speaker = Prims.Speaker;
     }
 
 
@@ -113,6 +114,13 @@ export default class Prims {
         strip.thisblock = strip.thisblock.next;
     }
 
+
+    static Speaker(strip)
+    {
+        strip.waitTimer = tinterval * 10;
+        window.location =  "jscall://Speaker"; 
+        strip.thisblock = strip.thisblock.next;
+    }
 
     static Redled(strip)
     {
