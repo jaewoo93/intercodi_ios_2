@@ -198,7 +198,7 @@ div.frame {
 #blockspalette {
     margin-top: 10px;
     margin-left: 20px;
-    position: relative;
+    position: absolute;
     background-color: whitesmoke;
     background-size: 100% 100%;
     border-radius: 15px;
@@ -259,12 +259,13 @@ div.frame {
 
 /* paltte 위치 설정   */
 #blockspalette .palette{
+    float: left;
     display: inline-block;
     position: relative;
     margin-top: 20px;
     margin-left: 50px;
     height: ${css_vh(15)};
-    width: ${css_vw(80)};
+    width: ${css_vw(60)};
     z-index:4;
     overflow: hidden;
 }
@@ -437,10 +438,53 @@ z-index: 5;
 .redobutton.pressed { background: url('../assets/undo/redopressed.svg'); background-size: 101%;}
 .redobutton.disable {opacity: 0.5; background: url('../assets/undo/redoOff.svg'); background-size: 101%;}
 
+/* 코딩 시작 버튼 */
+#blockspalette .go {
+    float: right;
+    display: inline-block;
+    top: ${css_vh(8)};
+    right: ${css_vh(2)};
+    margin: ${css_vh(0.00)};
+    padding: ${css_vh(0.00)};
+    width: ${css_vw(14)};
+    height: ${css_vh(14)};
+    /* 이전, 이후 버튼 배경 색 */    
+    z-index: 6;
+}
+
+
+.go.on {
+    background:  url('../assets/ui/startbutton.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.go.off {
+    background:  url('../assets/ui/stop1.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.go.on.presentationmode, .go.off.presentationmode {
+    position: absolute;
+    right: ${css_vh(0)};
+    left: initial;
+    top: 0px;
+}
+
+.go.on.nopresent, .go.off.nopresent {
+    position: absolute;
+    top: ${css_vh(0.65)};
+    left: ${css_vh(61.72)};
+    background: blue;
+}
+/* ------------------------------------------------------------ */
+
 /* Scripts */
 
 .scripts {
-    /* margin-top: ${css_vh(25)}; */
+    
+    margin-top: ${css_vh(30)};
     width: ${css_vw(100)};
     height: ${css_vh(100)};
     position: absolute;

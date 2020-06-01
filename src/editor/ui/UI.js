@@ -128,6 +128,24 @@ export default class UI {
         bp.setAttribute('id', 'blockspalette');
         Palette.setup(bp);
         Undo.setup(bp);
+
+        var codeStart = newHTML('div', 'codeStart', bp);       
+        codeStart.setAttribute('id', 'codeStart');        
+        
+        ScratchJr.stage = new Stage(codeStart);
+        Grid.init(codeStart);
+        if(ScratchJr.isEditable()) {
+            UI.creatTopBarClicky(codeStart, 'addtext', 'addText', UI.addText);
+            UI.creatTopBarClicky(codeStart, 'setbkg', 'changeBkg', UI.addBackground);
+         }
+        UI.creatTopBarClicky(codeStart, 'grid', 'gridToggle off', UI.switchGrid);
+        UI.creatTopBarClicky(codeStart, 'go', 'go on', UI.toggleRun);
+       
+       
+
+        UI.creatTopBarClicky(codeStart, 'resetall', 'resetall', UI.resetAllSprites);
+        // UI.creatTopBarClicky(div, 'full', 'fullscreen', ScratchJr.fullScreen);
+        UI.toggleGrid(true);
     }
 
     static BottomSection () {
@@ -764,23 +782,23 @@ export default class UI {
     static stageArea (inner) {
         var ssl = newHTML('div', 'centerpanel', inner);
 
-        var codeStart = newHTML('div', 'codeStart', ssl);       
-        codeStart.setAttribute('id', 'codeStart');        
+        // var codeStart = newHTML('div', 'codeStart', ssl);       
+        // codeStart.setAttribute('id', 'codeStart');        
         
-        ScratchJr.stage = new Stage(codeStart);
-        Grid.init(codeStart);
-        if(ScratchJr.isEditable()) {
-            UI.creatTopBarClicky(codeStart, 'addtext', 'addText', UI.addText);
-            UI.creatTopBarClicky(codeStart, 'setbkg', 'changeBkg', UI.addBackground);
-         }
-        UI.creatTopBarClicky(codeStart, 'grid', 'gridToggle off', UI.switchGrid);
-        UI.creatTopBarClicky(codeStart, 'go', 'go on', UI.toggleRun);
+        // ScratchJr.stage = new Stage(codeStart);
+        // Grid.init(codeStart);
+        // if(ScratchJr.isEditable()) {
+        //     UI.creatTopBarClicky(codeStart, 'addtext', 'addText', UI.addText);
+        //     UI.creatTopBarClicky(codeStart, 'setbkg', 'changeBkg', UI.addBackground);
+        //  }
+        // UI.creatTopBarClicky(codeStart, 'grid', 'gridToggle off', UI.switchGrid);
+        // UI.creatTopBarClicky(codeStart, 'go', 'go on', UI.toggleRun);
        
        
 
-        UI.creatTopBarClicky(codeStart, 'resetall', 'resetall', UI.resetAllSprites);
-        // UI.creatTopBarClicky(div, 'full', 'fullscreen', ScratchJr.fullScreen);
-        UI.toggleGrid(true);
+        // UI.creatTopBarClicky(codeStart, 'resetall', 'resetall', UI.resetAllSprites);
+        // // UI.creatTopBarClicky(div, 'full', 'fullscreen', ScratchJr.fullScreen);
+        // UI.toggleGrid(true);
     }
 
     static resetAllSprites (e) {

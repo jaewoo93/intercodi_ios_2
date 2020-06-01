@@ -1,41 +1,4 @@
-/* 코딩 시작 버튼 */
-.go {
-    float: right;
-    margin-right: 5px;
-    background-image: url('../assets/ui/startbutton.svg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    width: ${css_vw(10)};
-    height: ${css_vh(10)};
-}
 
-
-.go.on {
-    background:  url('../assets/ui/startbutton.svg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.go.off {
-    background:  url('../assets/ui/stop1.svg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.go.on.presentationmode, .go.off.presentationmode {
-    position: absolute;
-    right: ${css_vh(0)};
-    left: initial;
-    top: 0px;
-}
-
-.go.on.nopresent, .go.off.nopresent {
-    position: absolute;
-    top: ${css_vh(0.65)};
-    left: ${css_vh(61.72)};
-    background: blue;
-}
-/* ------------------------------------------------------------ */
 
 /* stage text edit */
 
@@ -187,7 +150,7 @@
  #codeStart {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 50%;
 } 
 
 
