@@ -230,13 +230,13 @@ export default class BlockSpecs {
             //name - [0]blocktype, [1]icon or datastructure, [2]blockshape, 
             //[3]argtype - BlockArg.js와 관련됨, [4]initial value, [5]highlight, [6]min, [7]max, [8]shadow
             'redled' : ['redled', BlockSpecs.getImageFrom('assets/blockicons/redon', 'svg'),
-                BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
+                BlockSpecs.orangeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
             'greenled' : ['greenled', BlockSpecs.getImageFrom('assets/blockicons/redon', 'svg'),
-                BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
+                BlockSpecs.orangeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
             'blueled' : ['blueled', BlockSpecs.getImageFrom('assets/blockicons/blueon', 'svg'),
-                BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
+                BlockSpecs.orangeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
             'ledoff' : ['ledoff', BlockSpecs.getImageFrom('assets/blockicons/turnoff', 'svg'),
-            BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
+            BlockSpecs.orangeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
 
             // blue category(Motor block)
 
