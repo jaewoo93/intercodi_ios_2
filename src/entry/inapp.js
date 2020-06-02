@@ -2,11 +2,19 @@ import {gn} from '../utils/lib';
 import Localization from '../utils/Localization';
 
 export function inappAbout () {
+    gn('aboutScratchjrTitle').textContent = Localization.localize('ABOUT_SCRATCHJR');
     gn('aboutWhatIs').textContent = Localization.localize('ABOUT_WHAT_IS');
     gn('aboutDescription').innerHTML = Localization.localize('ABOUT_DESCRIPTION') + '<br/><br/>' +
         Localization.localize('ABOUT_INSPIRED_BY');
     gn('aboutWhyCreate').textContent = Localization.localize('ABOUT_WHY_CREATE');
     gn('aboutWhyCreateDescription').innerHTML = Localization.localize('ABOUT_WHY_CREATE_DESCRIPTION');
+    gn('aboutWhoCreated').textContent = Localization.localize('ABOUT_WHO_CREATED');
+    gn('aboutWhoCreatedDescription').innerHTML = (
+        Localization.localize('ABOUT_WHO_CREATED_DESCRIPTION'));
+    gn('aboutWhoSupported').textContent = Localization.localize('ABOUT_WHO_SUPPORTED');
+    gn('aboutWhoSupportedDescription').innerHTML = (
+        Localization.localize('ABOUT_WHO_SUPPORTED_DESCRIPTION')
+    );
 
     // PBS-only
     if (window.Settings.edition == 'PBS') {
@@ -71,53 +79,68 @@ export function inappInterfaceGuide () {
 }
 
 export function inappPaintEditorGuide () {
-    var paintKeyHeaderNode = gn('paint-key-header');
-    var paintKeyDescriptionNode = gn('paint-key-description');
+    // Localized category names
+    gn('purple-block-category-header').textContent = Localization.localize('BLOCKS_BASIC_BLOCKS');
+    gn('green-block-category-header').textContent = Localization.localize('BLOCKS_LED_BLOCKS');
+    gn('blue-block-category-header').textContent = Localization.localize('BLOCKS_MOTOR_BLOCKS');
+    gn('orange-block-category-header').textContent = Localization.localize('BLOCKS_SPEAKER_BLOCKS');
 
-    paintKeyHeaderNode.textContent = Localization.localize('PAINT_GUIDE_UNDO', {N:1});
-    paintKeyDescriptionNode.textContent = Localization.localize('PAINT_GUIDE_UNDO_DESCRIPTION');
-
-    var paintKeys = [
-        'UNDO',
-        'REDO',
-        'SHAPE',
-        'CHARACTER_NAME',
-        'CUT',
-        'DUPLICATE',
-        'ROTATE',
-        'DRAG',
-        'SAVE',
-        'FILL',
-        'CAMERA',
-        'COLOR',
-        'LINE_WIDTH'
+    var blockDescriptionKeys = [
+        'BLOCKS_START',
+        'BLOCKS_START_DESCRIPTION',
+        'BLOCKS_REPEAT_FOREVER',
+        'BLOCKS_REPEAT_FOREVER_DESCRIPTION',
+        'BLOCKS_DELAY',
+        'BLOCKS_DELAY_DESCRIPTION',
+        'BLOCKS_END',
+        'BLOCKS_END_DESCRIPTION',
+        'BLOCKS_REPEAT',
+        'BLOCKS_REPEAT_DESCRIPTION',
+        'BLOCKS_MOVE_RIGHT',
+        'BLOCKS_MOVE_RIGHT_DESCRIPTION',
+        'BLOCKS_MOVE_LEFT',
+        'BLOCKS_MOVE_LEFT_DESCRIPTION',
+        'BLOCKS_MOVE_UP',
+        'BLOCKS_MOVE_UP_DESCRIPTION',
+        'BLOCKS_MOVE_DOWN',
+        'BLOCKS_MOVE_DOWN_DESCRIPTION',
+        'BLOCKS_STOP',
+        'BLOCKS_STOP_DESCRIPTION',
+        'BLOCKS_SAY',
+        'BLOCKS_SAY_DESCRIPTION',
+        'BLOCKS_GROW',
+        'BLOCKS_GROW_DESCRIPTION',
+        'BLOCKS_SHRINK',
+        'BLOCKS_SHRINK_DESCRIPTION',
+        'BLOCKS_RESET_SIZE',
+        'BLOCKS_RESET_SIZE_DESCRIPTION',
+        'BLOCKS_HIDE',
+        'BLOCKS_HIDE_DESCRIPTION',
+        'BLOCKS_SHOW',
+        'BLOCKS_SHOW_DESCRIPTION',
+        'BLOCKS_POP',
+        'BLOCKS_POP_DESCRIPTION',
+        'BLOCKS_PLAY_RECORDED',
+        'BLOCKS_PLAY_RECORDED_DESCRIPTION',
+        'BLOCKS_WAIT',
+        'BLOCKS_WAIT_DESCRIPTION',
+        'BLOCKS_STOP',
+        'BLOCKS_STOP_DESCRIPTION',
+        'BLOCKS_SET_SPEED',
+        'BLOCKS_SET_SPEED_DESCRIPTION',
+        'BLOCKS_REPEAT',
+        'BLOCKS_REPEAT_DESCRIPTION',
+        'BLOCKS_END',
+        'BLOCKS_END_DESCRIPTION',
+        'BLOCKS_REPEAT_FOREVER',
+        'BLOCKS_REPEAT_FOREVER_DESCRIPTION',
+        'BLOCKS_GO_TO_PAGE',
+        'BLOCKS_GO_TO_PAGE_DESCRIPTION'
     ];
 
-    var paintDescriptions = [];
-    for (var i = 0; i < paintKeys.length; i++) {
-        var key = paintKeys[i];
-        paintDescriptions.push([
-            Localization.localize('PAINT_GUIDE_' + key, {N: i+1}),
-            Localization.localize('PAINT_GUIDE_' + key + '_DESCRIPTION')
-        ]);
+    for (let i = 0; i < blockDescriptionKeys.length; i++) {
+        gn(blockDescriptionKeys[i]).textContent = Localization.localize(blockDescriptionKeys[i]);
     }
-
-
-    var currentButton = document.getElementById('paint-button-undo');
-
-    var switchHelp = function (e) {
-        var target = e.target;
-        if (target.className == 'paint-button-text') {
-            var descriptionId = parseInt(target.innerText - 1);
-            paintKeyHeaderNode.textContent = paintDescriptions[descriptionId][0];
-            paintKeyDescriptionNode.textContent = paintDescriptions[descriptionId][1];
-            currentButton.className = 'paint-button';
-            currentButton = target.parentNode;
-            currentButton.className = currentButton.className + ' paint-button-selected';
-            window.parent.ScratchAudio.sndFXWithVolume('keydown.wav', 0.3);
-        }
-    };
-    document.addEventListener('touchstart', switchHelp, false);
 }
 
 export function inappBlocksGuide () {

@@ -34,6 +34,7 @@ h2 {
 }
 
 .description {
+  font-family: Roboto;
   font-size: ${css_vh(3.78)};
   margin-bottom: ${css_vh(7)};
 }
