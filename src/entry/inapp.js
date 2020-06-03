@@ -26,56 +26,29 @@ export function inappAbout () {
 }
 
 export function inappInterfaceGuide () {
-    var interfaceKeyHeaderNode = gn('interface-key-header');
-    var interfaceKeyDescriptionNode = gn('interface-key-description');
+    // Localized category names
+    gn('orange-block-category-header').textContent = Localization.localize('SMART_BLOCKS');
+    gn('yellow-block-category-header').textContent = Localization.localize('HOW_TO_USE');
+    
 
-    interfaceKeyHeaderNode.textContent = Localization.localize('INTERFACE_GUIDE_SAVE', {N: 1});
-    interfaceKeyDescriptionNode.textContent = Localization.localize('INTERFACE_GUIDE_SAVE_DESCRIPTION');
-
-    var interfaceKeys = [
-        'SAVE',
-        'STAGE',
-        'PRESENTATION_MODE',
-        'GRID',
-        'CHANGE_BG',
-        'ADD_TEXT',
-        'RESET_CHAR',
-        'GREEN_FLAG',
-        'PAGES',
-        'PROJECT_INFO',
-        'UNDO_REDO',
-        'PROGRAMMING_SCRIPT',
-        'PROGRAMMING_AREA',
-        'BLOCKS_PALETTE',
-        'BLOCKS_CATEGORIES',
-        'CHARACTERS'
+    var blockDescriptionKeys = [
+        'LED',
+        'LED_DESCRIPTION',
+        'SIGNAGE',
+        'SIGNAGE_DESCRIPTION',
+        'NUMBER',
+        'NUMBER_DESCRIPTION',
+        'WORD',
+        'WORD_DESCRIPTION',
+        'MOTOR',
+        'MOTOR_DESCRIPTION',
+        'SPEAKER_BLOCK',
+        'SPEAKER_BLOCK_DESCRIPTION'
     ];
 
-    var interfaceDescriptions = [];
-    for (var i = 0; i < interfaceKeys.length; i++) {
-        var key = interfaceKeys[i];
-        interfaceDescriptions.push([
-            Localization.localize('INTERFACE_GUIDE_' + key, {N: i+1}),
-            Localization.localize('INTERFACE_GUIDE_' + key + '_DESCRIPTION')
-        ]);
+    for (let i = 0; i < blockDescriptionKeys.length; i++) {
+        gn(blockDescriptionKeys[i]).textContent = Localization.localize(blockDescriptionKeys[i]);
     }
-
-
-    var currentButton = document.getElementById('interface-button-save');
-
-    var switchHelp = function (e) {
-        var target = e.target;
-        if (target.className == 'interface-button-text') {
-            var descriptionId = parseInt(target.innerText - 1);
-            interfaceKeyHeaderNode.textContent = interfaceDescriptions[descriptionId][0];
-            interfaceKeyDescriptionNode.textContent = interfaceDescriptions[descriptionId][1];
-            currentButton.className = 'interface-button';
-            currentButton = target.parentNode;
-            currentButton.className = currentButton.className + ' interface-button-selected';
-            window.parent.ScratchAudio.sndFXWithVolume('keydown.wav', 0.3);
-        }
-    };
-    document.addEventListener('touchstart', switchHelp, false);
 }
 
 export function inappPaintEditorGuide () {
@@ -106,36 +79,16 @@ export function inappPaintEditorGuide () {
         'BLOCKS_MOVE_DOWN_DESCRIPTION',
         'BLOCKS_STOP',
         'BLOCKS_STOP_DESCRIPTION',
-        'BLOCKS_SAY',
-        'BLOCKS_SAY_DESCRIPTION',
-        'BLOCKS_GROW',
-        'BLOCKS_GROW_DESCRIPTION',
-        'BLOCKS_SHRINK',
-        'BLOCKS_SHRINK_DESCRIPTION',
-        'BLOCKS_RESET_SIZE',
-        'BLOCKS_RESET_SIZE_DESCRIPTION',
-        'BLOCKS_HIDE',
-        'BLOCKS_HIDE_DESCRIPTION',
-        'BLOCKS_SHOW',
-        'BLOCKS_SHOW_DESCRIPTION',
-        'BLOCKS_POP',
-        'BLOCKS_POP_DESCRIPTION',
-        'BLOCKS_PLAY_RECORDED',
-        'BLOCKS_PLAY_RECORDED_DESCRIPTION',
-        'BLOCKS_WAIT',
-        'BLOCKS_WAIT_DESCRIPTION',
-        'BLOCKS_STOP',
-        'BLOCKS_STOP_DESCRIPTION',
-        'BLOCKS_SET_SPEED',
-        'BLOCKS_SET_SPEED_DESCRIPTION',
-        'BLOCKS_REPEAT',
-        'BLOCKS_REPEAT_DESCRIPTION',
-        'BLOCKS_END',
-        'BLOCKS_END_DESCRIPTION',
-        'BLOCKS_REPEAT_FOREVER',
-        'BLOCKS_REPEAT_FOREVER_DESCRIPTION',
-        'BLOCKS_GO_TO_PAGE',
-        'BLOCKS_GO_TO_PAGE_DESCRIPTION'
+        'BLOCKS_RED_LED',
+        'BLOCKS_RED_LED_DESCRIPTION',
+        'BLOCKS_GREEN_LED',
+        'BLOCKS_GREEN_LED_DESCRIPTION',
+        'BLOCKS_BLUE_LED',
+        'BLOCKS_BLUE_LED_DESCRIPTION',
+        'BLOCKS_TURN_OFF',
+        'BLOCKS_TURN_OFF_DESCRIPTION',
+        'BLOCKS_SPEAKER',
+        'BLOCKS_SPEAKER_DESCRIPTION'
     ];
 
     for (let i = 0; i < blockDescriptionKeys.length; i++) {
