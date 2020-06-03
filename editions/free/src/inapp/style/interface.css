@@ -80,7 +80,7 @@ body {
     margin-top: ${css_vh(2.96)};
     margin-left: ${css_vh(15.95)};
     margin-right: ${css_vh(15.95)};
-    height: ${css_vh(23.03)};
+    height: ${css_vh(40.03)};
     color: #808080;
     padding-bottom: ${css_vh(3.5)};
     margin-bottom: ${css_vh(3.29)};
@@ -98,6 +98,12 @@ body {
     padding-bottom: ${css_vh(1.64)};
 }
 
+.block-wrapper-right2 {
+    float: right;
+    width: ${css_vh(40)};
+    padding-bottom: ${css_vh(1.64)};
+}
+
 .block-image-wrapper {
     float: left;
 }
@@ -107,6 +113,21 @@ body {
     font-weight: bold;
     border-bottom: 1px solid #BFBFBF;
     padding-bottom: ${css_vh(0.99)};
+}
+
+.block-title2 {
+    margin-left: ${css_vw(3)};
+    font-size: ${css_vh(2.5)};
+    font-weight: bold;
+    border-bottom: 1px solid #BFBFBF;
+    padding-bottom: ${css_vh(0.99)};
+}
+
+.info-description {
+    margin-top: ${css_vh(3.29)};
+    font-size: ${css_vh(2.30)};
+    color: #6F6F6E;
+    line-height: ${css_vh(3.62)};
 }
 
 .block-image {
@@ -119,15 +140,18 @@ body {
     margin-top: ${css_vh(3.29)};
     margin-left: ${css_vh(1.64)};
     width: ${css_vh(23.03)};
+    
 }
 
 .block-description {
     float: right;
     margin-top: ${css_vh(3.29)};
+    margin-bottom: ${css_vh(2)};
     width: ${css_vh(34.54)};
     font-size: ${css_vh(2.30)};
     color: #6F6F6E;
     line-height: ${css_vh(3.62)};
+    
 }
 
 .block-description-repeat {
