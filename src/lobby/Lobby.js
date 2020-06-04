@@ -230,21 +230,21 @@ export default class Lobby {
         switch (page) {
         case 'about':
             url = host + 'about.html';
-            Lobby.loadLink(div, url, 'contentwrap noscroll', 'htmlcontents fixed');
+            Lobby.loadLink(div, url, 'contentwrap scroll', 'htmlcontents scrolled');
             break;
         case 'interface':
             document.ontouchmove = function (e) {
                 e.preventDefault();
             };
             url = host + 'interface.html';
-            Lobby.loadLink(div, url, 'contentwrap scroll', 'htmlcontents scrolled');
+            Lobby.loadLink(div, url, 'contentwrap noscroll', 'htmlcontents fixed');
             break;
         case 'paint':
             document.ontouchmove = function (e) {
                 e.preventDefault();
             };
             url = host + 'paint.html';
-            Lobby.loadLink(div, url, 'contentwrap scroll', 'htmlcontents scrolled');
+            Lobby.loadLink(div, url, 'contentwrap noscroll', 'htmlcontents fixed');
             break;
         case 'blocks':
             url = host + 'blocks.html';

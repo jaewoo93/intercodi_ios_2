@@ -144,22 +144,22 @@ export default class BlockSpecs {
             [   // 기본 블록
                 BlockSpecs.getImageFrom('assets/categories/BASIC_ON_category', 'svg'),
                 BlockSpecs.getImageFrom('assets/categories/BASIC_OFF_category', 'svg'),
-                // window.Settings.categoryStartColor      // json 파일에서 white로 수정함
+                window.Settings.categoryStartColor
             ],
             [   // LED 블록
                 BlockSpecs.getImageFrom('assets/categories/LED_ON_category', 'svg'),
                 BlockSpecs.getImageFrom('assets/categories/LED_OFF_category', 'svg'),
-                // window.Settings.categoryLooksColor      // json 파일에서 white로 수정함
+                window.Settings.categoryLooksColor
             ],
             [   // 모터 블록
                 BlockSpecs.getImageFrom('assets/categories/MOTOR_ON_category', 'svg'),
                 BlockSpecs.getImageFrom('assets/categories/MOTOR_OFF_category', 'svg'),
-                // window.Settings.categoryMotionColor     // json 파일에서 white로 수정함
+                window.Settings.categoryMotionColor
             ],
             [   // 스피커 블록
                 BlockSpecs.getImageFrom('assets/categories/SPEAKER_ON_category', 'svg'),
                 BlockSpecs.getImageFrom('assets/categories/SPEAKER_OFF_category', 'svg'),
-                // window.Settings.categorySoundColor      // json 파일에서 white로 수정함
+                window.Settings.categorySoundColor
             ]
             // [
             //     BlockSpecs.getImageFrom('assets/categories/FlowOn', 'svg'),
@@ -179,7 +179,7 @@ export default class BlockSpecs {
     {
          return [   
              
-            ['onflag', 'wait','repeat','space','space', 'forever', 'endstack'],
+            ['onflag', 'wait','repeat','space','space','endstack','forever'],
             ['redled', 'greenled', 'blueled', 'ledoff'],
             ['up', 'down', 'left', 'right','motorstop'],
             ['speaker']];
@@ -213,48 +213,57 @@ export default class BlockSpecs {
     static setupBlocksSpecs () {
         return {
             // yellow category(normal block)
-            'onflag': ['onflag', BlockSpecs.getImageFrom('assets/blockicons/start', 'svg'),
-                BlockSpecs.yellowStart, null, null, BlockSpecs.pinkCmdH, null, null, BlockSpecs.StartS],
-            'wait': ['wait', BlockSpecs.getImageFrom('assets/blockicons/delay', 'svg'),
-                BlockSpecs.pinkCmd, 'n', 10, BlockSpecs.pinkCmdH, 0, 50, BlockSpecs.cmdS],
+            'onflag': ['onflag', BlockSpecs.getImageFrom('assets/blockicons/greenFlag', 'svg'),
+                BlockSpecs.yellowStart, null, null, BlockSpecs.yellowStartH, null, null, BlockSpecs.startS],
+            'wait': ['wait', BlockSpecs.getImageFrom('assets/blockicons/Wait', 'svg'),
+                BlockSpecs.yellowCmd, 'n', 10, BlockSpecs.yellowCmdH, 0, 50, BlockSpecs.cmdS],
             // 'stopmine': ['stopmine', BlockSpecs.getImageFrom('assets/blockicons/Stop', 'svg'),
             //     BlockSpecs.yellowCmd, null, null, BlockSpecs.yellowCmdH, null, null, BlockSpecs.cmdS],
-            'repeat': ['repeat', BlockSpecs.getImageFrom('assets/blockicons/repeat_forever', 'svg'),
-                BlockSpecs.cShape, 'n', 2, BlockSpecs.cShapeH, 0, 99, BlockSpecs.repeatS],
-            'endstack': ['endstack', BlockSpecs.getImageFrom('assets/blockicons/end', 'svg'),
-            BlockSpecs.redEnd, null, null, BlockSpecs.redEndH, null, null, BlockSpecs.endS],
+            'repeat': ['repeat', BlockSpecs.getImageFrom('assets/blockicons/Repeat', 'svg'),
+                BlockSpecs.cShape, 'n', 4, BlockSpecs.cShapeH, 0, 24, BlockSpecs.repeatS],
+            'endstack': ['endstack', null, BlockSpecs.redEnd, null, null,
+                BlockSpecs.redEndH, null, null, BlockSpecs.endS],
             'forever': ['forever', BlockSpecs.getImageFrom('assets/blockicons/Forever', 'svg'),
                 BlockSpecs.redEnd, null, null, BlockSpecs.redEndH, null, null, BlockSpecs.endS],
 
             // purple category(led block)
             //name - [0]blocktype, [1]icon or datastructure, [2]blockshape, 
             //[3]argtype - BlockArg.js와 관련됨, [4]initial value, [5]highlight, [6]min, [7]max, [8]shadow
-            'redled' : ['redled', BlockSpecs.getImageFrom('assets/blockicons/redon', 'svg'),
-                BlockSpecs.orangeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
-            'greenled' : ['greenled', BlockSpecs.getImageFrom('assets/blockicons/redon', 'svg'),
-                BlockSpecs.orangeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
-            'blueled' : ['blueled', BlockSpecs.getImageFrom('assets/blockicons/blueon', 'svg'),
-                BlockSpecs.orangeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
-            'ledoff' : ['ledoff', BlockSpecs.getImageFrom('assets/blockicons/turnoff', 'svg'),
-            BlockSpecs.orangeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
+            'redled' : ['redled', BlockSpecs.getImageFrom('assets/blockicons/3', 'png'),
+                BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
+            'greenled' : ['greenled', BlockSpecs.getImageFrom('assets/blockicons/2', 'png'),
+                BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
+            'blueled' : ['blueled', BlockSpecs.getImageFrom('assets/blockicons/1', 'png'),
+                BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
+            'ledoff' : ['ledoff', BlockSpecs.getImageFrom('assets/blockicons/4', 'png'),
+            BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
 
             // blue category(Motor block)
 
-            'up': ['up', BlockSpecs.getImageFrom('assets/blockicons/forward', 'svg'),
+            'up': ['up', BlockSpecs.getImageFrom('assets/blockicons/motorFORWARD', 'svg'),
                 BlockSpecs.blueCmd, null, null, BlockSpecs.blueCmdH, -15, 15, BlockSpecs.cmdS],
-            'down': ['down', BlockSpecs.getImageFrom('assets/blockicons/backward', 'svg'),
+            'down': ['down', BlockSpecs.getImageFrom('assets/blockicons/Down', 'svg'),
                 BlockSpecs.blueCmd, null, null, BlockSpecs.blueCmdH, -15, 15, BlockSpecs.cmdS],
-            'right': ['right', BlockSpecs.getImageFrom('assets/blockicons/redon', 'svg'),
+            'right': ['right', BlockSpecs.getImageFrom('assets/blockicons/Right', 'svg'),
                 BlockSpecs.blueCmd, null, null, BlockSpecs.blueCmdH, -12, 12, BlockSpecs.cmdS],
-            'left': ['left', BlockSpecs.getImageFrom('assets/blockicons/redon', 'svg'),
+            'left': ['left', BlockSpecs.getImageFrom('assets/blockicons/Left', 'svg'),
                 BlockSpecs.blueCmd, null, null, BlockSpecs.blueCmdH, -12, 12, BlockSpecs.cmdS],
-            'motorstop' : ['motorstop', BlockSpecs.getImageFrom('assets/blockicons/redon', 'svg'),
+            'motorstop' : ['motorstop', BlockSpecs.getImageFrom('assets/blockicons/motorSTOP', 'svg'),
             BlockSpecs.blueCmd, null, null, BlockSpecs.blueCmdH, -12, 12, BlockSpecs.cmdS],
 
 
+            // 'up': ['up', BlockSpecs.getImageFrom('assets/blockicons/Up', 'svg'),
+            //     BlockSpecs.blueCmd, 'n', 1, BlockSpecs.blueCmdH, -15, 15, BlockSpecs.cmdS],
+            // 'down': ['down', BlockSpecs.getImageFrom('assets/blockicons/Down', 'svg'),
+            //     BlockSpecs.blueCmd, 'n', 1, BlockSpecs.blueCmdH, -15, 15, BlockSpecs.cmdS],
+            // 'right': ['right', BlockSpecs.getImageFrom('assets/blockicons/Right', 'svg'),
+            //     BlockSpecs.blueCmd, 'n', 1, BlockSpecs.blueCmdH, -12, 12, BlockSpecs.cmdS],
+            // 'left': ['left', BlockSpecs.getImageFrom('assets/blockicons/Left', 'svg'),
+            //     BlockSpecs.blueCmd, 'n', 1, BlockSpecs.blueCmdH, -12, 12, BlockSpecs.cmdS],
+
             // green category(Speaker block)
-            'speaker': ['speaker', BlockSpecs.getImageFrom('assets/blockicons/redon', 'svg'),
-                BlockSpecs.limeCmd, null, null, BlockSpecs.orangeCmdH, null, null, BlockSpecs.cmdS],
+            'speaker': ['speaker', BlockSpecs.getImageFrom('assets/blockicons/Bump', 'svg'),
+                BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
             
 
             'say': ['say', BlockSpecs.getImageFrom('assets/blockicons/Say', 'svg'),

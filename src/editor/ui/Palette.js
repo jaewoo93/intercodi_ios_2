@@ -19,7 +19,7 @@ import {frame, gn, localx, newHTML, scaleMultiplier, isTablet, newDiv,
     setCanvasSize, hitRect, writeText, getStringSize} from '../../utils/lib';
 
 
-let blockscale = 1.2;
+let blockscale = 1.0;
 let numcat = 0; // getter
 let betweenblocks = undefined; // Set in setup()
 let blockdy = 5;
@@ -61,7 +61,7 @@ export default class Palette {
         var bkg = newHTML('div', 'catbkg', sel);
         newHTML('div', 'catimage', bkg);
         
-         var leftPx = 15 * scaleMultiplier;      // category 맨 처음 왼쪽 여백
+         var leftPx = 5 * scaleMultiplier;      // category 맨 처음 왼쪽 여백
          var widthPx = 75 * scaleMultiplier;  // blockcategory 사이의 간격
 
         for (var i = 0; i < BlockSpecs.categories.length; i++) {
@@ -295,10 +295,9 @@ export default class Palette {
         return null;
     }
 
-    // category icon 관련 부분
     static createSelector (parent, n, dx, dy, spec) {
-        var pxWidth = 60 * scaleMultiplier;
-        var pxHeight = 75 * scaleMultiplier;        // category icon 크기 - pxWidth * pxHeight
+        var pxWidth = 72 * scaleMultiplier;
+        var pxHeight = 90 * scaleMultiplier;        // category icon 크기 - pxWidth * pxHeight
         var div = newDiv(parent, dx, dy, pxWidth, pxHeight, {
             position: 'absolute'
         });
@@ -315,7 +314,6 @@ export default class Palette {
         var onicon = spec[0].cloneNode(true);
         onicon.width = pxWidth;
         onicon.height = pxHeight;
-        // onicon.offsetTop = 2 * blockscale;
         div.appendChild(onicon);
         div.bkg = spec[2];
         setProps(onicon.style, {
@@ -368,16 +366,16 @@ export default class Palette {
         var dx = dxblocks;
         for (var k = 0; k < list.length; k++) {
             if (list[k] == 'space') {
-                dx += 40 * blockscale;
+                dx += 30 * blockscale;
             } else {
                 // palette 블록 크기
                 var newb = Palette.newScaledBlock(pal, list[k],
-                    ((list[k] == 'repeat') ? 1.0 * scaleMultiplier : blockscale), dx, blockdy);
+                    ((list[k] == 'repeat') ? 0.8 * scaleMultiplier : blockscale), dx, blockdy);
                 newb.lift();
                 dx += betweenblocks;
             }
         }
-        dx += 40;
+        dx += 30;
         if ((n == (BlockSpecs.categories.length - 1)) && (ScratchJr.stage.pages.length > 1)) {
             Palette.addPagesBlocks(dx);
         }

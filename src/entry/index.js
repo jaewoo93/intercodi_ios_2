@@ -5,7 +5,6 @@ import UI from '../editor/ui/UI';
 import Localization from '../utils/Localization';
 import AppUsage from '../utils/AppUsage';
 import Home from '../lobby/Home';
-import Lobby from '../lobby/Lobby';
 
 export function indexMain () {
     gn('gettings').ontouchend = indexGettingstarted;
