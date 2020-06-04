@@ -1,5 +1,6 @@
 /* 홈화면 및 코딩 프레임 크기조절 */
 div.frame {
+    background-color: #EAF8F9;
     width: 100%;
     height: 100%;
     position: relative;
@@ -27,11 +28,9 @@ div.frame {
 
 /* Container */
 *.topsection {
-    background-color: #fffdd0;
-    padding: ${css_vh(0)};
-    margin: ${css_vh(0)} ${css_vh(0)} ${css_vh(0)};
+    padding: ${css_vh(2)};
     width: 100%;
-    height: ${css_vh(15)};
+    height: ${css_vh(10)};
     background-size: 100% 100%;
 }
 
@@ -40,8 +39,8 @@ div.frame {
     display: inline-block;
     margin: ${css_vh(0)};
     padding: ${css_vh(0)};
-    width: 40%;
-    height: ${css_vh(15)};
+    width: 50%;
+    height: ${css_vh(10)};
     z-index: 1;
 }
 
@@ -50,8 +49,8 @@ div.frame {
     display: inline-block;
     margin: ${css_vh(0)};
     padding: ${css_vh(0)};
-    width: 60%;
-    height: ${css_vh(15)};
+    width: 50%;
+    height: ${css_vh(10)};
     z-index: 1;
 }
 
@@ -198,15 +197,19 @@ div.frame {
 /* 되돌리기 버튼 */
 #blockspalette {
     position: relative;
-    top: ${css_vh(58)};
-    height: ${css_vh(27)};
+    left: 0;
+    right: 0;
+    height: ${64 * scaleMultiplier}px;
+
+    margin: ${css_vh(0)};
+    padding: ${css_vh(0)};
     z-index: 10;
 }
 
 #blockspalette .papercut{
     position: absolute;
     margin: ${css_vh(0)};
-    top: ${92.16 * scaleMultiplier}px;
+    top: ${64 * scaleMultiplier}px;
     left: ${css_vh(0)};
     background: white;
     z-index: 50;
@@ -232,38 +235,39 @@ div.frame {
 /* 블록 뒷 배경 조절  */
 #blockspalette .categoryselector{
     display: inline-block;
+    word-spacing: -1;
     position: relative;
     margin: ${css_vh(0)};
     z-index: 60;
-    width: ${300 * scaleMultiplier}px;
-    height: ${100 * scaleMultiplier}px;
-    /* overflow: hidden; */
+    width: ${354 * scaleMultiplier}px;
+    height: ${64 * scaleMultiplier}px;
+    overflow: hidden;
 }
 
 #blockspalette .categoryselector .catbkg{
     position: relative;
-    width: ${300 * scaleMultiplier}px;
-    height: ${92.16 * scaleMultiplier}px;
+    width: ${708 * scaleMultiplier}px;
+    height: ${128 * scaleMultiplier}px;
     background: #E9ECF0;
-    /* overflow; hidden; */
+    overflow: hidden;
+    zoom: 50%;
 }
+
 /* 코딩블록 뒷배경  */
 .catbkg .catimage{
-    width: ${300 * scaleMultiplier}px;
-    height: ${92.16 * scaleMultiplier}px;
-    /* 배경 크기에 맞게 다시 요청 - 단색으로 해야 재수정 안함!! 클래스에 있어서 no-repeat를 불가함*/
-    background: url('../assets/categories/categoryimage.svg');
-    background-size: 100%;
+    width: ${708 * scaleMultiplier}px;
+    height: ${132 * scaleMultiplier}px;
+    background-color: #8BA5B0;
+    background-size: 100% 100%;
 }
 
 /* paltte 위치 설정   */
 #blockspalette .palette{
     display: inline-block;
     position: relative;
-    top: ${css_vh(12)};
     margin: ${css_vh(0)} ${css_vh(0)} ${css_vh(0)};
-    height: ${css_vh(12)};;
-    width: ${724 * scaleMultiplier}px; 
+    height: ${64 * scaleMultiplier}px;
+    width: ${659 * scaleMultiplier}px;
     z-index:4;
     overflow: hidden;
 }
@@ -439,8 +443,7 @@ z-index: 5;
 /* Scripts */
 
 .scripts {
-    background-color: #fffdd0;
-    background-size: 100% 100%;
+    background-color: #C0E6F9;
     left: 0;
     right: 0;
     position: absolute;

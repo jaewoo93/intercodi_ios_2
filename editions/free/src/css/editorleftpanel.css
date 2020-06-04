@@ -2,28 +2,40 @@
 /* 홈버튼 기능 삭제 예정 */
 .flipme {
     float: left;
-    background-image: url('../assets/lobby/house.svg');
-    background-size: 120% 100%;
-    width: 30%;
-    height: 90%;
+    margin-left: 5px;
+    background-image: url('../assets/lobby/home_noPush.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: ${css_vw(10)};
+    height: ${css_vh(10)};
 } 
  /* webview pixelates the image unless we do this */
  .flipme:active {
-    background-image: url('../assets/ui/fliplogoPressed.svg');
-    background-size: 120% 100%;
+    float: left;
+    margin-left: 5px;
+    background-image: url('../assets/lobby/home_push.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: ${css_vw(10)};
+    height: ${css_vh(10)};
 }
 
 .Btbluetooth {
     float: left;
-    background-image: url('../assets/ui/bluetoothLogo.png');
-    background-size: 120% 100%;
-    width: 30%;
-    height: 90%;
+    margin-left: 5px;
+    background-image: url('../assets/ui/bluetoothbutton.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: ${css_vw(10)};
+    height: ${css_vh(10)};
 } 
  /* webview pixelates the image unless we do this */
  .Btbluetooth:active {
-    background-image:  url('../assets/ui/bluetoothLogo.png');
-    background-size: 120% 100%;
+    background-image: url('../assets/ui/bluetoothbutton.svg');
+    background-size: 110% 110%;
+    background-repeat: no-repeat;
+    width: ${css_vw(10)};
+    height: ${css_vh(10)};
 }
 
   /* background: rgba(255,255,255,0.5);  */
