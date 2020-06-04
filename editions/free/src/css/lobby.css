@@ -425,7 +425,6 @@ div.localizationselect.selected:after {
     position: absolute;
     padding: 0px;
     height: ${css_vh(79.18)};
-    top: ${css_vh(10.42)};
 }
 
 .htmlcontents.fixed {
