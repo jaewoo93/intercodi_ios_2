@@ -30,7 +30,7 @@ div.frame {
 *.topsection {
     padding: ${css_vh(2)};
     width: 100%;
-    height: ${css_vh(10)};
+    height: ${css_vh(13)};
     background-size: 100% 100%;
 }
 
@@ -199,10 +199,7 @@ div.frame {
     position: relative;
     left: 0;
     right: 0;
-    height: ${64 * scaleMultiplier}px;
-
-    margin: ${css_vh(0)};
-    padding: ${css_vh(0)};
+    height: ${css_vh(10)};
     z-index: 10;
 }
 
@@ -214,7 +211,7 @@ div.frame {
     background: white;
     z-index: 50;
     width: 100%;
-    height: ${3 * scaleMultiplier}px;
+    height: ${0}px;
     background:
     -webkit-box-shadow: 0px ${2 * scaleMultiplier}px ${6 * scaleMultiplier}px #333;
 }
@@ -225,7 +222,7 @@ div.frame {
     top: ${css_vh(0)};
     left: ${css_vh(0)};
     width: 100%;
-    height: ${7 * scaleMultiplier}px;
+    height: ${0}px;
     background: url('../assets/cateries/papercut.png');
     background-size: auto 100%;
     background-repeat-x: repeat;
@@ -237,28 +234,31 @@ div.frame {
     display: inline-block;
     word-spacing: -1;
     position: relative;
-    margin: ${css_vh(0)};
+    margin-left: ${css_vw(4)};
     z-index: 60;
-    width: ${354 * scaleMultiplier}px;
-    height: ${64 * scaleMultiplier}px;
+    width: ${300 * scaleMultiplier}px;
+    height: ${css_vh(12)};
     overflow: hidden;
 }
 
 #blockspalette .categoryselector .catbkg{
     position: relative;
-    width: ${708 * scaleMultiplier}px;
-    height: ${128 * scaleMultiplier}px;
-    background: #E9ECF0;
+    width: ${300 * scaleMultiplier}px;
+    height: ${css_vh(12)};
+    border-radius: 12px;
+    background-color: #C0E6F9;
     overflow: hidden;
-    zoom: 50%;
 }
 
 /* 코딩블록 뒷배경  */
 .catbkg .catimage{
-    width: ${708 * scaleMultiplier}px;
-    height: ${132 * scaleMultiplier}px;
+    margin-top: ${css_vh(2)};
+    margin-left: ${css_vw(1)};
+    width: ${280 * scaleMultiplier}px;
+    height: ${css_vh(8)};
     background-color: #8BA5B0;
     background-size: 100% 100%;
+    border-radius: 12px;
 }
 
 /* paltte 위치 설정   */
@@ -267,8 +267,8 @@ div.frame {
     position: relative;
     margin: ${css_vh(0)} ${css_vh(0)} ${css_vh(0)};
     height: ${64 * scaleMultiplier}px;
-    width: ${659 * scaleMultiplier}px;
-    z-index:4;
+    width: ${500 * scaleMultiplier}px;
+    z-index: 4;
     overflow: hidden;
 }
 
@@ -279,6 +279,8 @@ div.frame {
 #blockspalette .green { background: #48CC7E;}
 #blockspalette .red { background: #D62222;}
 #blockspalette .editorversion{ background: #D62222;}
+
+
 
 #blockspalette .editorversion {
     float: right;
@@ -446,6 +448,7 @@ z-index: 5;
     background-color: #C0E6F9;
     left: 0;
     right: 0;
+    top: ${css_vh(27)};
     position: absolute;
     overflow: hidden;
 }
@@ -730,22 +733,19 @@ form.projectname {
 }
 /* -------------------------------------------------------------------------------------------------- */
 
-/* *.pnamefield{
+*.pnamefield{
     position: absolute;
-    margin: ${css_vh(0)} ${css_vh(0.26)} ${css_vh(0)};
     padding: ${css_vh(0)};
     text-align: center;
     font-family: Roboto;
     font-weight: normal;
     font-size: ${css_vh(3.13)};
     line-height: ${css_vh(4.17)};
-    -webkit-border-radius: ${36 * scaleMultiplier}px;
     cursor: default;
-    background: white;
-    width: ${css_vh(46.88)};
-    height: ${css_vh(6.51)};
+    width: ${css_vh(0)};
+    height: ${css_vh(0)};
     outline: ${css_vh(0)};
-} */
+}
 
 /* .fixedinfo {
     top: ${css_vh(26.04)};

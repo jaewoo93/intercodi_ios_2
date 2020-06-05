@@ -61,8 +61,8 @@ export default class Palette {
         var bkg = newHTML('div', 'catbkg', sel);
         newHTML('div', 'catimage', bkg);
         
-         var leftPx = 5 * scaleMultiplier;      // category 맨 처음 왼쪽 여백
-         var widthPx = 75 * scaleMultiplier;  // blockcategory 사이의 간격
+         var leftPx = 10 * scaleMultiplier;      // category 맨 처음 왼쪽 여백
+         var widthPx = 70 * scaleMultiplier;  // blockcategory 사이의 간격
 
         for (var i = 0; i < BlockSpecs.categories.length; i++) {
             Palette.createSelector(sel, i, leftPx + i * widthPx, 0, BlockSpecs.categories[i]);
@@ -296,8 +296,8 @@ export default class Palette {
     }
 
     static createSelector (parent, n, dx, dy, spec) {
-        var pxWidth = 72 * scaleMultiplier;
-        var pxHeight = 90 * scaleMultiplier;        // category icon 크기 - pxWidth * pxHeight
+        var pxWidth = 65 * scaleMultiplier;
+        var pxHeight = 65 * scaleMultiplier;        // category icon 크기 - pxWidth * pxHeight
         var div = newDiv(parent, dx, dy, pxWidth, pxHeight, {
             position: 'absolute'
         });
@@ -355,7 +355,7 @@ export default class Palette {
             sel.childNodes[1].style.visibility = (sel.index == n) ? 'visible' : 'hidden';
         }
         var pal = gn('palette');
-        gn('blockspalette').style.background = currentSel.bkg;
+        // gn('blockspalette').style.background = currentSel.bkg;
         while (pal.childElementCount > 0) {
             pal.removeChild(pal.childNodes[0]);
         }
