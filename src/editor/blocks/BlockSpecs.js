@@ -213,16 +213,16 @@ export default class BlockSpecs {
     static setupBlocksSpecs () {
         return {
             // yellow category(normal block)
-            'onflag': ['onflag', BlockSpecs.getImageFrom('assets/blockicons/greenFlag', 'svg'),
+            'onflag': ['onflag', BlockSpecs.getImageFrom('assets/blockicons/start', 'svg'),
                 BlockSpecs.yellowStart, null, null, BlockSpecs.yellowStartH, null, null, BlockSpecs.startS],
-            'wait': ['wait', BlockSpecs.getImageFrom('assets/blockicons/Wait', 'svg'),
+            'wait': ['wait', BlockSpecs.getImageFrom('assets/blockicons/delay', 'svg'),
                 BlockSpecs.yellowCmd, 'n', 10, BlockSpecs.yellowCmdH, 0, 50, BlockSpecs.cmdS],
             // 'stopmine': ['stopmine', BlockSpecs.getImageFrom('assets/blockicons/Stop', 'svg'),
             //     BlockSpecs.yellowCmd, null, null, BlockSpecs.yellowCmdH, null, null, BlockSpecs.cmdS],
-            'repeat': ['repeat', BlockSpecs.getImageFrom('assets/blockicons/Repeat', 'svg'),
-                BlockSpecs.cShape, 'n', 4, BlockSpecs.cShapeH, 0, 24, BlockSpecs.repeatS],
-            'endstack': ['endstack', null, BlockSpecs.redEnd, null, null,
-                BlockSpecs.redEndH, null, null, BlockSpecs.endS],
+            'repeat': ['repeat', BlockSpecs.getImageFrom('assets/blockicons/start', 'svg'),
+                BlockSpecs.cShape, 'n', 2, BlockSpecs.cShapeH, 0, 99, BlockSpecs.repeatS],
+            'endstack': ['endstack', BlockSpecs.getImageFrom('assets/blockicons/end', 'svg'),
+            BlockSpecs.redEnd, null, null, BlockSpecs.redEndH, null, null, BlockSpecs.endS],
             'forever': ['forever', BlockSpecs.getImageFrom('assets/blockicons/Forever', 'svg'),
                 BlockSpecs.redEnd, null, null, BlockSpecs.redEndH, null, null, BlockSpecs.endS],
 

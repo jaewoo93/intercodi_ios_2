@@ -19,7 +19,7 @@ import {frame, gn, localx, newHTML, scaleMultiplier, isTablet, newDiv,
     setCanvasSize, hitRect, writeText, getStringSize} from '../../utils/lib';
 
 
-let blockscale = 1.0;
+let blockscale = 0.9;
 let numcat = 0; // getter
 let betweenblocks = undefined; // Set in setup()
 let blockdy = 5;
@@ -299,8 +299,7 @@ export default class Palette {
         var pxWidth = 65 * scaleMultiplier;
         var pxHeight = 65 * scaleMultiplier;        // category icon 크기 - pxWidth * pxHeight
         var div = newDiv(parent, dx, dy, pxWidth, pxHeight, {
-            position: 'absolute',
-            top: 5
+            position: 'absolute'
         });
         div.index = n;
         var officon = spec[1].cloneNode(true);
@@ -356,7 +355,8 @@ export default class Palette {
             sel.childNodes[1].style.visibility = (sel.index == n) ? 'visible' : 'hidden';
         }
         var pal = gn('palette');
-        // gn('blockspalette').style.background = currentSel.bkg;
+        // 카테고리 누를 때 palette 배경 색 바뀌는 부분
+        // pal.style.background = currentSel.bkg;
         while (pal.childElementCount > 0) {
             pal.removeChild(pal.childNodes[0]);
         }
@@ -371,7 +371,7 @@ export default class Palette {
             } else {
                 // palette 블록 크기
                 var newb = Palette.newScaledBlock(pal, list[k],
-                    ((list[k] == 'repeat') ? 0.8 * scaleMultiplier : blockscale), dx, blockdy);
+                    ((list[k] == 'repeat') ? 0.7 * scaleMultiplier : blockscale), dx, blockdy);
                 newb.lift();
                 dx += betweenblocks;
             }
