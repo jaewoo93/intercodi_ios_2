@@ -212,7 +212,6 @@ div.frame {
     z-index: 50;
     width: 100%;
     height: ${0}px;
-    background:
     -webkit-box-shadow: 0px ${2 * scaleMultiplier}px ${6 * scaleMultiplier}px #333;
 }
 
@@ -223,7 +222,6 @@ div.frame {
     left: ${css_vh(0)};
     width: 100%;
     height: ${0}px;
-    background: url('../assets/cateries/papercut.png');
     background-size: auto 100%;
     background-repeat-x: repeat;
 }
@@ -237,15 +235,15 @@ div.frame {
     margin-left: ${css_vw(4)};
     z-index: 60;
     width: ${300 * scaleMultiplier}px;
-    height: ${css_vh(12)};
+    height: ${css_vh(10)};
     overflow: hidden;
 }
 
 #blockspalette .categoryselector .catbkg{
     position: relative;
     width: ${300 * scaleMultiplier}px;
-    height: ${css_vh(12)};
-    border-radius: 12px;
+    height: ${css_vh(10)};
+    border-radius: 12px 12px 0px 0px;
     background-color: #C0E6F9;
     overflow: hidden;
 }

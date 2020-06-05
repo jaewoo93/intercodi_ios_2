@@ -299,7 +299,8 @@ export default class Palette {
         var pxWidth = 65 * scaleMultiplier;
         var pxHeight = 65 * scaleMultiplier;        // category icon 크기 - pxWidth * pxHeight
         var div = newDiv(parent, dx, dy, pxWidth, pxHeight, {
-            position: 'absolute'
+            position: 'absolute',
+            top: 5
         });
         div.index = n;
         var officon = spec[1].cloneNode(true);
