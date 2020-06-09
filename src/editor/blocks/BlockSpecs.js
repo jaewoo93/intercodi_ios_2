@@ -338,7 +338,7 @@ export default class BlockSpecs {
             // ---------------------------------------------------------------
 
             'speaker': Localization.localize('BLOCK_DESC_PLAY_SOUND', {
-                SOUND_NAME: Localization.localize('BLOCK_DESC_PLAY_SOUND')
+                SOUND_NAME: Localization.localize('BLOCK_DESC_PLAY_SOUND_POP')
             })
         };
     }
