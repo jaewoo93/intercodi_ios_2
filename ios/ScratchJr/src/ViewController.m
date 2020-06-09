@@ -47,7 +47,6 @@ Popup *popupView;
     webview = (UIWebView*)[self view] ;
     [webview setDelegate:self];
     [Database open:@"ScratchJr"];
-    [ScratchJr cameraInit];
     [self reload];
     [self showSplash];
     [IO init: self];
@@ -433,9 +432,9 @@ Popup *popupView;
     return [RecordSound recordclose:keep];
 }
 
--(NSString*) scratchjr_cameracheck {
-    return [ScratchJr cameracheck];
-}
+//  -(NSString*) scratchjr_cameracheck {
+//      return [ScratchJr cameracheck];
+// }
 -(bool) scratchjr_has_multiple_cameras {
     return YES;
 }

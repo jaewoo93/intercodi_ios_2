@@ -52,7 +52,7 @@
 
 
 - (BOOL)setupSession;
-+ (NSString *)cameraHasPermission;
+// + (NSString *)cameraHasPermission;
 - (void)closeSession;
 - (NSUInteger)cameraCount;
 - (BOOL)setCamera:(NSString *)mode;

@@ -38,7 +38,7 @@ NSMutableDictionary *soundtimers;
 
 + (NSString*)getsettings {
     NSString *choice =[[NSUserDefaults standardUserDefaults] stringForKey:@"debugstate"];
-    return [NSString stringWithFormat: @"%@,%@,%@,%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],choice, [RecordSound getPermission], [ViewFinder cameraHasPermission]];
+    return [NSString stringWithFormat: @"%@,%@,%@,%@", [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"],choice, [RecordSound getPermission]];
 }
 
 +(NSString*) remove:(NSString*)filename {
