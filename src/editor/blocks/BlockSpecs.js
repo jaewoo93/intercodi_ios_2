@@ -214,41 +214,41 @@ export default class BlockSpecs {
         return {
             // yellow category(normal block)
             'onflag': ['onflag', BlockSpecs.getImageFrom('assets/blockicons/start', 'svg'),
-                BlockSpecs.yellowStart, null, null, BlockSpecs.yellowStartH, null, null, BlockSpecs.startS],
+                BlockSpecs.yellowStart, null, null, BlockSpecs.pinkCmdH, null, null, BlockSpecs.startS],
             'wait': ['wait', BlockSpecs.getImageFrom('assets/blockicons/delay', 'svg'),
-                BlockSpecs.yellowCmd, 'n', 10, BlockSpecs.yellowCmdH, 0, 50, BlockSpecs.cmdS],
+                BlockSpecs.pinkCmd, 'n', 10, BlockSpecs.pinkCmdH, 0, 50, BlockSpecs.cmdS],
             // 'stopmine': ['stopmine', BlockSpecs.getImageFrom('assets/blockicons/Stop', 'svg'),
             //     BlockSpecs.yellowCmd, null, null, BlockSpecs.yellowCmdH, null, null, BlockSpecs.cmdS],
-            'repeat': ['repeat', BlockSpecs.getImageFrom('assets/blockicons/start', 'svg'),
+            'repeat': ['repeat', BlockSpecs.getImageFrom('assets/blockicons/Repeat', 'svg'),
                 BlockSpecs.cShape, 'n', 2, BlockSpecs.cShapeH, 0, 99, BlockSpecs.repeatS],
             'endstack': ['endstack', BlockSpecs.getImageFrom('assets/blockicons/end', 'svg'),
             BlockSpecs.redEnd, null, null, BlockSpecs.redEndH, null, null, BlockSpecs.endS],
-            'forever': ['forever', BlockSpecs.getImageFrom('assets/blockicons/Forever', 'svg'),
+            'forever': ['forever', BlockSpecs.getImageFrom('assets/blockicons/repeat2', 'svg'),
                 BlockSpecs.redEnd, null, null, BlockSpecs.redEndH, null, null, BlockSpecs.endS],
 
             // purple category(led block)
             //name - [0]blocktype, [1]icon or datastructure, [2]blockshape, 
             //[3]argtype - BlockArg.js와 관련됨, [4]initial value, [5]highlight, [6]min, [7]max, [8]shadow
-            'redled' : ['redled', BlockSpecs.getImageFrom('assets/blockicons/3', 'png'),
+            'redled' : ['redled', BlockSpecs.getImageFrom('assets/blockicons/redon', 'svg'),
                 BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
-            'greenled' : ['greenled', BlockSpecs.getImageFrom('assets/blockicons/2', 'png'),
+            'greenled' : ['greenled', BlockSpecs.getImageFrom('assets/blockicons/greenon', 'svg'),
                 BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
-            'blueled' : ['blueled', BlockSpecs.getImageFrom('assets/blockicons/1', 'png'),
+            'blueled' : ['blueled', BlockSpecs.getImageFrom('assets/blockicons/blueon', 'svg'),
                 BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
-            'ledoff' : ['ledoff', BlockSpecs.getImageFrom('assets/blockicons/4', 'png'),
+            'ledoff' : ['ledoff', BlockSpecs.getImageFrom('assets/blockicons/turnoff', 'svg'),
             BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
 
             // blue category(Motor block)
 
-            'up': ['up', BlockSpecs.getImageFrom('assets/blockicons/motorFORWARD', 'svg'),
+            'up': ['up', BlockSpecs.getImageFrom('assets/blockicons/forward', 'svg'),
                 BlockSpecs.blueCmd, null, null, BlockSpecs.blueCmdH, -15, 15, BlockSpecs.cmdS],
-            'down': ['down', BlockSpecs.getImageFrom('assets/blockicons/Down', 'svg'),
+            'down': ['down', BlockSpecs.getImageFrom('assets/blockicons/backward', 'svg'),
                 BlockSpecs.blueCmd, null, null, BlockSpecs.blueCmdH, -15, 15, BlockSpecs.cmdS],
             'right': ['right', BlockSpecs.getImageFrom('assets/blockicons/Right', 'svg'),
                 BlockSpecs.blueCmd, null, null, BlockSpecs.blueCmdH, -12, 12, BlockSpecs.cmdS],
             'left': ['left', BlockSpecs.getImageFrom('assets/blockicons/Left', 'svg'),
                 BlockSpecs.blueCmd, null, null, BlockSpecs.blueCmdH, -12, 12, BlockSpecs.cmdS],
-            'motorstop' : ['motorstop', BlockSpecs.getImageFrom('assets/blockicons/motorSTOP', 'svg'),
+            'motorstop' : ['motorstop', BlockSpecs.getImageFrom('assets/blockicons/Stop_Motor', 'svg'),
             BlockSpecs.blueCmd, null, null, BlockSpecs.blueCmdH, -12, 12, BlockSpecs.cmdS],
 
 
@@ -262,8 +262,8 @@ export default class BlockSpecs {
             //     BlockSpecs.blueCmd, 'n', 1, BlockSpecs.blueCmdH, -12, 12, BlockSpecs.cmdS],
 
             // green category(Speaker block)
-            'speaker': ['speaker', BlockSpecs.getImageFrom('assets/blockicons/Bump', 'svg'),
-                BlockSpecs.limeCmd, null, null, BlockSpecs.limeCmdH, null, null, BlockSpecs.cmdS],
+            'speaker': ['speaker', BlockSpecs.getImageFrom('assets/blockicons/Speaker', 'svg'),
+                BlockSpecs.orangeCmd, null, null, BlockSpecs.orangeCmdH, null, null, BlockSpecs.cmdS],
             
 
             'say': ['say', BlockSpecs.getImageFrom('assets/blockicons/Say', 'svg'),
