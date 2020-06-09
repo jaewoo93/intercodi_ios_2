@@ -1,23 +1,23 @@
 .go {
     position: absolute;
-    top: ${css_vh(0.5)};
-    right: ${css_vh(0)};
-    width: 15%;
-    height: 95%;
-    background-image:  url('../assets/ui/go.svg');
-    background-size: 120% 100%;
-    
+    top: ${css_vh(75)};
+    right: ${css_vh(3)};
+    width: ${css_vw(20)};
+    height: ${css_vh(20)};
+    background-image:  url('../assets/ui/startbutton.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 #go {background-repeat: no-repeat; }
 
-.go.on {background:  url('../assets/ui/go.svg'); background-size: 100%; }
+.go.on {background-image:  url('../assets/ui/startbutton.svg'); background-size: 100% 100%; }
 
-.go.off:active {background:  url('../assets/ui/goPressed.svg'); background-size: 100%; }
+.go.off:active {background-image:  url('../assets/ui/startbutton.svg'); background-size: 100% 100%; }
 
-.go.off {background:  url('../assets/ui/stop1.svg'); background-size: 100%; }
+.go.off {background:  url('../assets/ui/stop1.svg'); background-size: 100% 100%; }
 
-.go.on:active {background:  url('../assets/ui/stopPressed1.svg'); background-size: 100%; }
+.go.on:active {background:  url('../assets/ui/stopPressed1.svg'); background-size: 100% 100%; }
 
 .go.on.presentationmode, .go.off.presentationmode {
     position: absolute;

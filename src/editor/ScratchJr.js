@@ -186,7 +186,6 @@ export default class ScratchJr {
         time = (new Date()) - 0;
         var urlvars = getUrlVars();
 
-        iOS.hascamera();
         ScratchJr.log('starting the app');
         BlockSpecs.initBlocks();
         Project.loadIcon = document.createElement('img');
