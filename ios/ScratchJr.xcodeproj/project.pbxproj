@@ -540,7 +540,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/../editions/free/Free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = creamo.Interco;
+				PRODUCT_BUNDLE_IDENTIFIER = creamo.Intercod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ScratchJr/ScratchJr-Bridging-Header.h";
@@ -561,7 +561,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = ACXDX73FNC;
+				DEVELOPMENT_TEAM = LE2JEQ5P57;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ScratchJr/ScratchJr-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -571,7 +571,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/../editions/free/Free-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = creamo.Interco;
+				PRODUCT_BUNDLE_IDENTIFIER = creamo.Intercod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ScratchJr/ScratchJr-Bridging-Header.h";

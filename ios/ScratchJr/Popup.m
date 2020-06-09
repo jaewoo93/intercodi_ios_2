@@ -25,6 +25,7 @@
 
 
 UIView*    btView;
+UITableView* btTableView;
 NSDictionary* blueDevice;
 UIButton *btBluetoothlist;
 NSArray *arDeviceName;
@@ -50,22 +51,17 @@ NSNumber *num;
     
      [self loadNib];
      deviceName = nil;
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(didRecieveNotification:) name:@"UpdateTableView" object:nil];
+   
     return self;
 }
 
-- (void)didRecieveNotification:(NSNotification  *)notification
-{
-    [_btTableView reloadData];
-}
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self)
     {
-        [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(didRecieveNotification:) name:@"UpdateTableView" object:nil];
-
+   
     }
      [self loadNib];
     deviceName = nil;
@@ -82,9 +78,8 @@ NSNumber *num;
     btView =    [bundle loadNibNamed:@"PopupView" owner:self options:nil].firstObject;
     self.btTableView.dataSource = self;
     self.btTableView.delegate =self;
-    self.btTableView.backgroundColor = [UIColor whiteColor];
-    self.btTableView.tableFooterView    =   [UIView new];
-    [self.btTableView reloadData];
+    btTableView.backgroundColor = [UIColor whiteColor];
+   
     [self addSubview:btView];
     btView.frame    =    self.bounds;
 
@@ -95,8 +90,6 @@ NSNumber *num;
     ViewController *main = [[ViewController alloc]init];
     [main closePopup];
     [CreamoBleClient stopForDevice];
-    
-    [getDivce removeAllObjects];
 }
 
 
@@ -109,26 +102,30 @@ NSNumber *num;
 {
     
     //row 수 디바이스 탐색 개수를 기반으로 하여 숫자 증가
-    if (getDivce    ==  nil)
-        return 0;
-    
-    return getDivce.count;
+    return 10;
     
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+   //table view 업데이트
+    
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     cell.backgroundColor = [UIColor whiteColor];
     cell.textLabel.textColor = [UIColor blackColor];
  
     
+    
     NSLog(@"%@nsmutalbearry",getDivce);
     
-    cell.textLabel.text = [getDivce objectAtIndex:indexPath.row];
-
-    return cell;
+    if(getDivce.count > indexPath.row)
+    {
+        cell.textLabel.text = [getDivce objectAtIndex:indexPath.row];
+//        [tableView reloadData];
+    }
+     return cell;
     
 }
 

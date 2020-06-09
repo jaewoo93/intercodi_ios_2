@@ -107,7 +107,7 @@ didConnectPeripheral:(CBPeripheral *)peripheral
         // Discover all characteristics for this service.
         [peripheral discoverCharacteristics:nil forService:service];
 
-        NSLog(@"service start: %@");
+        NSLog(@"service start");
 
     }    
 }
@@ -161,34 +161,38 @@ for (service in [discoveredPeripheral services])
       }
    }
 }
-
-- (void)centralManager:(CBCentralManager *)central willRestoreState:(NSDictionary<NSString *,id> *)dict
-{
-    
-}
 //블루투스 탐색 및 정보 가져오기
 +(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)Peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
-    //  NSLog(@"Discovered %@ %@", Peripheral, advertisementData);
+    
+   
+    
+    
+//  NSLog(@"Discovered %@ %@", Peripheral, advertisementData);
     discoveredPeripheral = Peripheral ;
     
     deviceName =Peripheral.name;
-    NSLog(@"devicename %@, info: %@", deviceName, advertisementData);
-//    [self get_device:deviceName];
+    NSLog(@"devicename %@", deviceName);
+    [self get_device:deviceName];
+    //임시 함수
+    
+   if([deviceName isEqualToString:@"Creamo"])
+   
 
-    if([deviceName isEqualToString:@"Creamo"])
-    {
-          
+        {
+           
         [CbCentralManager connectPeripheral:discoveredPeripheral options:nil];
         
        //블루투스 status call 기능
         ViewController *VC = [[ViewController alloc]init];
         [VC btStatusform];
         [CbCentralManager stopScan];
-    }
+            
+
+        }
+   
+
 }
-
-
 
 //블루투스 탐색 시작
 +(void)beginScanningForDevice
@@ -218,12 +222,11 @@ for (service in [discoveredPeripheral services])
     if(getDevcename !=nil)
     {
         [getDivce addObject:getDevcename];
-     
+      
         NSOrderedSet *userSet = [[NSOrderedSet alloc] initWithArray:getDivce];
 
-        getDivce = [[NSMutableArray alloc] initWithArray:[userSet array]];
+    getDivce = [[NSMutableArray alloc] initWithArray:[userSet array]];
         
-        [NSNotificationCenter.defaultCenter postNotificationName:@"UpdateTableView" object:nil];
     }
     
 }

@@ -47,7 +47,7 @@ Popup *popupView;
     webview = (UIWebView*)[self view] ;
     [webview setDelegate:self];
     [Database open:@"ScratchJr"];
-//    [ScratchJr cameraInit];
+    [ScratchJr cameraInit];
     [self reload];
     [self showSplash];
     [IO init: self];
@@ -224,7 +224,7 @@ Popup *popupView;
    [CreamoBleClient centralManager:CbManager didDiscoverPeripheral:peripheral advertisementData:data RSSI:rssi];
    [CreamoBleClient peripheral:peripheral didUpdateValueForCharacteristic:chardata error:errordata];
     
-    [popupView.btTableView reloadData];
+
     [self.view addSubview:popupView];
     
  }
@@ -439,7 +439,6 @@ Popup *popupView;
 -(bool) scratchjr_has_multiple_cameras {
     return YES;
 }
-
 -(NSString*) scratchjr_startfeed:(NSString*)str {
     return [ScratchJr startfeed:str];
 }
