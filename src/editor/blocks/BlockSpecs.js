@@ -96,7 +96,7 @@ export default class BlockSpecs {
         BlockSpecs.redEndLong = BlockSpecs.getImageFrom('assets/blocks/endlong', 'svg');
         BlockSpecs.redEndLongH = BlockSpecs.getImageFrom('assets/blocks/eh/stoplongH');
 
-        BlockSpecs.cShape = BlockSpecs.getImageFrom('assets/blocks/Repeat', 'svg');
+        BlockSpecs.cShape = BlockSpecs.getImageFrom('assets/blocks/repeat');
         BlockSpecs.cShapeH = BlockSpecs.getImageFrom('assets/blocks/eh/repeatH');
 
         BlockSpecs.blueCmd = BlockSpecs.getImageFrom('assets/blocks/blueCmd','svg');

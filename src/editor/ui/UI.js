@@ -48,8 +48,8 @@ export default class UI {
  
     static layout () {
         UI.topSection();
-        UI.middleSection();
         UI.BottomSection();
+        UI.middleSection();
         UI.fullscreenControls();
         UI.createFormForText(frame);
         ScratchJr.setupKeypad();

@@ -28,26 +28,29 @@ div.frame {
 
 /* Container */
 *.topsection {
-    margin-top: 2.2%;
+    padding: ${css_vh(2)};
     width: 100%;
-    height: 7.16%;
+    height: ${css_vh(13)};
+    background-size: 100% 100%;
 }
 
 *.leftpanel {
-    position: absolute;
+    position: relative;
     display: inline-block;
     margin: ${css_vh(0)};
-    width: 14.9%;
-    height: 7.16%;
+    padding: ${css_vh(0)};
+    width: 50%;
+    height: ${css_vh(10)};
     z-index: 1;
 }
 
 *.centerpanel {
-    position: absolute;
+    position: relative;
     display: inline-block;
-    margin-left: 15%;
+    margin: ${css_vh(0)};
+    padding: ${css_vh(0)};
     width: 50%;
-    height: 100%;
+    height: ${css_vh(10)};
     z-index: 1;
 }
 
@@ -194,10 +197,9 @@ div.frame {
 /* 되돌리기 버튼 */
 #blockspalette {
     position: relative;
-    margin-top: 4.5%; 
     left: 0;
     right: 0;
-    height: 10%;
+    height: ${css_vh(10)};
     z-index: 10;
 }
 
@@ -230,38 +232,45 @@ div.frame {
 #blockspalette .categoryselector{
     display: inline-block;
     word-spacing: -1;
-    position: absolute;
-    margin-left: 5.5%;
-    float: left;
+    position: relative;
+    margin-left: ${css_vw(4)};
     z-index: 60;
-    width: 25.9%;
-    height: 100%;
-    background-image: url('../assets/categories/category_background.svg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    width: ${300 * scaleMultiplier}px;
+    height: ${css_vh(10)};
     overflow: hidden;
 }
 
 #blockspalette .categoryselector .catbkg{
+    position: relative;
+    width: ${300 * scaleMultiplier}px;
+    height: ${css_vh(10)};
+    border-radius: 12px 12px 0px 0px;
+    background-color: #C0E6F9;
+    overflow: hidden;
 }
 
 /* 코딩블록 뒷배경  */
 .catbkg .catimage{
+    margin-top: ${css_vh(2)};
+    margin-left: ${css_vw(1)};
+    width: ${280 * scaleMultiplier}px;
+    height: ${css_vh(8)};
+    background-color: #8BA5B0;
+    background-size: 100% 100%;
+    border-radius: 12px;
 }
 
 /* paltte 위치 설정   */
 #blockspalette .palette{
     display: inline-block;
-    position: absolute;
-    margin-left: 33.6%; 
-    height: 100%;
-    width: 44.1%;
+    position: relative;
+    margin-left: ${css_vw(2)};
+    height: ${css_vh(10)};
+    width: ${500 * scaleMultiplier}px;
     z-index: 4;
     overflow: hidden;
-    background-image: url('../assets/categories/palette_background.svg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    background-color: #C0E6F9;
+    border-radius: 12px 12px 0px 0px;
 }
 
 #blockspalette .yellow { background: #CD7CD1}    /* #ffe100;}{ background: #FFFA5A;} */
@@ -271,6 +280,8 @@ div.frame {
 #blockspalette .green { background: #48CC7E;}
 #blockspalette .red { background: #D62222;}
 #blockspalette .editorversion{ background: #D62222;}
+
+
 
 #blockspalette .editorversion {
     float: right;
@@ -394,7 +405,7 @@ z-index: 5;
     width: ${120 * scaleMultiplier}px;
     height: ${css_vh(8)};
     /* 이전, 이후 버튼 배경 색 */
-    background: none;      
+    background: #D62222;      
     z-index: 6;
 }
 
@@ -405,8 +416,8 @@ z-index: 5;
     padding: ${css_vh(0.00)};
     width: ${css_vh(7.81)};
     height: ${css_vh(8)};
-    background: url('../assets/undo/undoOn.svg');
-    background-size: 100% 100%;
+    background: url('../assets/undo/undo.png');
+    background-size: 101%;
     -webkit-user-select: none;
 }
 #id_undo {background-repeat: no-repeat;}
@@ -418,29 +429,33 @@ z-index: 5;
     padding: ${css_vh(0.00)};
     width: ${css_vh(7.81)};
     height: ${css_vh(8)};
-    background: url('../assets/undo/redoOn.svg');
-    background-size: 100% 100%;
+    background: url('../assets/undo/redo.png');
+    background-size: 101%;
     -webkit-user-select: none;
 }
 #id_redo {background-repeat: no-repeat;}
 
-.undobutton.enable {opacity: 1; background: url('../assets/undo/undoOn.svg'); background-size: 100% 100%; }
-.undobutton.pressed { background:  url('../assets/undo/undoOnPressed.svg'); background-size: 100% 100%; }
-.undobutton.disable {opacity: 0.5; background:  url('../assets/undo/undoOff.svg'); background-size: 100% 100%; }
+.undobutton.enable {opacity: 1; background: url('../assets/undo/undo.svg'); background-size: 101%;}
+.undobutton.pressed { background:  url('../assets/undo/undopressed.svg'); background-size: 101%;}
+.undobutton.disable {opacity: 0.5; background:  url('../assets/undo/undoOff.svg'); background-size: 101%;}
 
-.redobutton.enable {opacity: 1; background: url('../assets/undo/redoOn.svg'); background-size: 100% 100%; }
-.redobutton.pressed { background: url('../assets/undo/redoOnPressed.svg'); background-size: 100% 100%; }
-.redobutton.disable {opacity: 0.5; background: url('../assets/undo/redoOff.svg'); background-size: 100% 100%; }
+.redobutton.enable {opacity: 1; background: url('../assets/undo/redo.svg'); background-size: 101%;}
+.redobutton.pressed { background: url('../assets/undo/redopressed.svg'); background-size: 101%;}
+.redobutton.disable {opacity: 0.5; background: url('../assets/undo/redoOff.svg'); background-size: 101%;}
 
 /* Scripts */
 
 .scripts {
     width: 97%;
-    height: 20%;
     background-color: #C0E6F9;
-    margin-left: 1.5%;
+    margin-left: 1%;
+    margin-bottom: 2%;
     top: ${css_vh(27)};
     position: absolute;
+    overflow: hidden;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #9999FF;
     border-radius: 15px;
 }
 

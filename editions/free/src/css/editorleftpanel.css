@@ -1,48 +1,41 @@
 /* sprite library panel */
 /* 홈버튼 기능 삭제 예정 */
 .flipme {
-    position: absolute;
     float: left;
-    margin-left: 11.18%;
+    margin-left: 5px;
     background-image: url('../assets/lobby/home_noPush.svg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    width: 38.2%;
-    height: 100%;
-}
-
+    width: ${css_vw(10)};
+    height: ${css_vh(10)};
+} 
  /* webview pixelates the image unless we do this */
  .flipme:active {
-    position: absolute;
     float: left;
-    margin-left: 11.18%;
+    margin-left: 5px;
     background-image: url('../assets/lobby/home_push.svg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    width: 38.2%;
-    height: 100%;
+    width: ${css_vw(10)};
+    height: ${css_vh(10)};
 }
 
 .Btbluetooth {
-    position: absolute;
     float: left;
-    margin-left: 57.5%;
+    margin-left: 5px;
     background-image: url('../assets/ui/bluetoothbutton.svg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    width: 31.4%;
-    height: 100%;
+    width: ${css_vw(10)};
+    height: ${css_vh(10)};
 } 
  /* webview pixelates the image unless we do this */
  .Btbluetooth:active {
-    position: absolute;
-    float: left;
-    margin-left: 57.5%;
     background-image: url('../assets/ui/bluetoothbutton.svg');
     background-size: 110% 110%;
     background-repeat: no-repeat;
-    width: 31.4%;
-    height: 100%;
+    width: ${css_vw(10)};
+    height: ${css_vh(10)};
 }
 
   /* background: rgba(255,255,255,0.5);  */

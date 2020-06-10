@@ -432,9 +432,9 @@ Popup *popupView;
     return [RecordSound recordclose:keep];
 }
 
-//  -(NSString*) scratchjr_cameracheck {
-//      return [ScratchJr cameracheck];
-// }
+-(NSString*) scratchjr_cameracheck {
+    return [ScratchJr cameracheck];
+}
 -(bool) scratchjr_has_multiple_cameras {
     return YES;
 }
