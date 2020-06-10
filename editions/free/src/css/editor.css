@@ -447,15 +447,12 @@ z-index: 5;
 
 .scripts {
     width: 97%;
+    height: 20%;
     background-color: #C0E6F9;
-    margin-left: 1%;
-    margin-bottom: 2%;
+    margin-left: 1.5%;
     top: ${css_vh(27)};
+    bottom: ${css_vh(5)};
     position: absolute;
-    overflow: hidden;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #9999FF;
     border-radius: 15px;
 }
 
