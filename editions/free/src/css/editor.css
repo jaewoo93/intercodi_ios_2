@@ -389,52 +389,47 @@ z-index: 5;
 /* Undo */
 
 .controlundo {
-    position: absolute;
     display: inline-block;
-    top: ${css_vh(2)};
-    right: ${css_vh(1)};
-    margin: ${css_vh(0.00)};
-    padding: ${css_vh(0.00)};
-    width: ${120 * scaleMultiplier}px;
-    height: ${css_vh(8)};
-    /* 이전, 이후 버튼 배경 색 */
-    background: #D62222;      
+    position: absolute;
+    margin-left: 77.7%;
+    height: 100%;
+    width: 22.3%;
     z-index: 6;
 }
 
 .undobutton {
     display: inline-block;
-    position: relative;
-    margin: ${css_vh(0.00)};
-    padding: ${css_vh(0.00)};
-    width: ${css_vh(7.81)};
-    height: ${css_vh(8)};
-    background: url('../assets/undo/undo.png');
-    background-size: 101%;
-    -webkit-user-select: none;
+    position: absolute;
+    margin-left: 19.04%;
+    margin-top: 6.65%;
+    width: 22.42%;
+    height: 66.1%;
+    background: url('../assets/undo/undo_nopush.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #id_undo {background-repeat: no-repeat;}
 
 .redobutton {
     display: inline-block;
-    position: relative;
-    margin: ${css_vh(0.00)};
-    padding: ${css_vh(0.00)};
-    width: ${css_vh(7.81)};
-    height: ${css_vh(8)};
-    background: url('../assets/undo/redo.png');
-    background-size: 101%;
-    -webkit-user-select: none;
+    position: absolute;
+    margin-left: 47.06%;
+    margin-top: 6.65%;
+    width: 22.42%;
+    height: 66.1%;
+    background: url('../assets/undo/redo_nopush.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 #id_redo {background-repeat: no-repeat;}
 
-.undobutton.enable {opacity: 1; background: url('../assets/undo/undo.svg'); background-size: 101%;}
-.undobutton.pressed { background:  url('../assets/undo/undopressed.svg'); background-size: 101%;}
-.undobutton.disable {opacity: 0.5; background:  url('../assets/undo/undoOff.svg'); background-size: 101%;}
+.undobutton.enable {background: url('../assets/undo/undo_nopush.svg'); background-size: 100% 100%;}
+.undobutton.pressed { background: url('../assets/undo/undo_nopush.svg'); background-size: 100% 100%;}
+.undobutton.disable {background: url('../assets/undo/undo_push.svg'); background-size: 100% 100%;}
 
-.redobutton.enable {opacity: 1; background: url('../assets/undo/redo.svg'); background-size: 101%;}
-.redobutton.pressed { background: url('../assets/undo/redopressed.svg'); background-size: 101%;}
-.redobutton.disable {opacity: 0.5; background: url('../assets/undo/redoOff.svg'); background-size: 101%;}
+.redobutton.enable {background: url('../assets/undo/redo_nopush.svg'); background-size: 100% 100%;}
+.redobutton.pressed { background: url('../assets/undo/redo_nopush.svg'); background-size: 100% 100%;}
+.redobutton.disable {background: url('../assets/undo/redo_push.svg'); background-size: 100% 100%;}
 
 /* Scripts */
 
