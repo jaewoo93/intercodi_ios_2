@@ -19,10 +19,10 @@ import {frame, gn, localx, newHTML, scaleMultiplier, isTablet, newDiv,
     setCanvasSize, hitRect, writeText, getStringSize} from '../../utils/lib';
 
 
-let blockscale = 0.9;
+let blockscale = 0.8;
 let numcat = 0; // getter
 let betweenblocks = undefined; // Set in setup()
-let blockdy = 5;
+let blockdy = 10;
 let timeoutid = undefined;
 let helpballoon = undefined;
 let dxblocks = 10;
@@ -61,11 +61,11 @@ export default class Palette {
         var bkg = newHTML('div', 'catbkg', sel);
         newHTML('div', 'catimage', bkg);
         
-         var leftPx = 10 * scaleMultiplier;      // category 맨 처음 왼쪽 여백
-         var widthPx = 70 * scaleMultiplier;  // blockcategory 사이의 간격
+         var leftPx = 15 * scaleMultiplier;      // category 맨 처음 왼쪽 여백
+         var widthPx = 60 * scaleMultiplier;  // blockcategory 사이의 간격
 
         for (var i = 0; i < BlockSpecs.categories.length; i++) {
-            Palette.createSelector(sel, i, leftPx + i * widthPx, 0, BlockSpecs.categories[i]);
+            Palette.createSelector(sel, i, leftPx + i * widthPx, 8, BlockSpecs.categories[i]);
         }
     }
 
@@ -296,8 +296,8 @@ export default class Palette {
     }
 
     static createSelector (parent, n, dx, dy, spec) {
-        var pxWidth = 65 * scaleMultiplier;
-        var pxHeight = 65 * scaleMultiplier;        // category icon 크기 - pxWidth * pxHeight
+        var pxWidth = 55 * scaleMultiplier;
+        var pxHeight = 58 * scaleMultiplier;        // category icon 크기 - pxWidth * pxHeight
         var div = newDiv(parent, dx, dy, pxWidth, pxHeight, {
             position: 'absolute'
         });
@@ -364,14 +364,14 @@ export default class Palette {
             return;
         }
         var list = (BlockSpecs.palettes[n]).concat();
-        var dx = dxblocks;
+        var dx = dxblocks + 10;
         for (var k = 0; k < list.length; k++) {
             if (list[k] == 'space') {
-                dx += 30 * blockscale;
+                dx += 32 * blockscale;
             } else {
                 // palette 블록 크기
                 var newb = Palette.newScaledBlock(pal, list[k],
-                    ((list[k] == 'repeat') ? 0.7 * scaleMultiplier : blockscale), dx, blockdy);
+                    ((list[k] == 'repeat') ? 0.65 * scaleMultiplier : blockscale), dx, blockdy);
                 newb.lift();
                 dx += betweenblocks;
             }
