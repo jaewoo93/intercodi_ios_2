@@ -434,17 +434,15 @@ z-index: 5;
 /* Scripts */
 
 .scripts {
-    width: 97%;
-    background-color: #C0E6F9;
-    margin-left: 1%;
-    margin-bottom: 2%;
-    top: ${css_vh(27)};
     position: absolute;
+    top: 25%;
+    margin-top: 0.6%;
+    margin-left: 2.2%;
+    width: 96.66%;
+    background: url('../assets/ui/script_background.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     overflow: hidden;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #9999FF;
-    border-radius: 15px;
 }
 
 #scriptscontainer {}
