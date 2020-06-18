@@ -194,10 +194,10 @@ div.frame {
 /* 되돌리기 버튼 */
 #blockspalette {
     position: relative;
-    margin-top: 3%;
+    margin-top: 4.5%;
     left: 0;
     right: 0;
-    height: 16%;
+    height: 10%;
     z-index: 10;
 }
 
@@ -237,7 +237,7 @@ div.frame {
     width: 25.9%;
     height: 100%;
     background-image: url('../assets/categories/category_background.svg');
-    background-size: 100% 150%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
 }
@@ -261,7 +261,7 @@ div.frame {
     z-index: 4;
     overflow: hidden;
     background-image: url('../assets/categories/palette_background.svg');
-    background-size: 100% 150%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
 }
@@ -435,7 +435,7 @@ z-index: 5;
 
 .scripts {
     position: absolute;
-    top: 28.6%;
+    top: 25%;
     margin-top: 0.6%;
     margin-left: 2.2%;
     width: 96.66%;

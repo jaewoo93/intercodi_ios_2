@@ -65,7 +65,7 @@ export default class Palette {
          var widthPx = 60 * scaleMultiplier;  // blockcategory 사이의 간격
 
         for (var i = 0; i < BlockSpecs.categories.length; i++) {
-            Palette.createSelector(sel, i, leftPx + i * widthPx, 16, BlockSpecs.categories[i]);
+            Palette.createSelector(sel, i, leftPx + i * widthPx, 8, BlockSpecs.categories[i]);
         }
     }
 
@@ -371,7 +371,7 @@ export default class Palette {
             } else {
                 // palette 블록 크기
                 var newb = Palette.newScaledBlock(pal, list[k],
-                    ((list[k] == 'repeat') ? 0.65 * scaleMultiplier : blockscale), dx, blockdy+20);
+                    ((list[k] == 'repeat') ? 0.65 * scaleMultiplier : blockscale), dx, blockdy);
                 newb.lift();
                 dx += betweenblocks;
             }
