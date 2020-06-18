@@ -1,5 +1,5 @@
 #import "ScratchJr.h"
-#import "ScratchJr-Swift.h"
+//#import "ScratchJr-Swift.h"
 #import "CreamoBleClient.h"
 #import "Popup.h"
 
